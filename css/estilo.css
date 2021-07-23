@@ -1,0 +1,174 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+@charset "UTF-8";
+
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	width: 100%;
+	background-color: white;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.marcador{
+	border: 1px solid red;
+}
+
+div#conteudo{
+	padding: 20px;
+	border: 1px solid black;
+	border-top: none;
+	margin-bottom: 70px;
+}
+
+
+footer{
+	width: 100%;
+	text-align: center;
+	background-color: lightgray;
+	padding: 10px;
+	bottom: 0;
+}
+
+footer a{
+	color: #ba2a29;
+}
+
+footer a:hover{
+	color: gray;
+	text-decoration: none;
+}
+
+/* Navegação **************************************************/
+
+div#menu{
+	text-align: center;
+}
+
+div#menu .row{
+}
+
+div.row div{
+}
+
+.menu-link {
+	padding: 20px 0;
+	border-top-right-radius: 10%;
+	border-top-left-radius: 10%;
+	cursor:pointer;
+	border: 1px solid black;
+}
+
+.menu-passivo{
+	border-bottom: 1px solid black;
+	color: gray;
+	background-color: lightgray;
+}
+
+.menu-ativo{
+	color: black;
+	border: 1px solid black;
+	border-bottom: none;
+}
+
+
+
+
+/* Tipografia *************************************************/
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Imagens *************************************************/
+
+
+/* Cards ****************************************************/
+
+.card{
+	display: block;
+	margin: 10px auto;
+}
+
+.gerador-img{
+	width: 200px;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+}
+
+.col-sm-4{
+}
+
+
+/* Media Queries *************************************************/
+
+
+@media (max-width: 575.98px) {
+	
+	.menu-link {
+	font-size: .7em;
+	}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
