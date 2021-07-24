@@ -1,1 +1,35 @@
-oraculos
+<div class="container">
+
+	<h3>Oráculos para RPG Solo</h3>
+
+	
+	
+	<div class="row">
+		<div id="botoes" class="col-sm-6">
+			<select onchange="tipoOraculo(value);" class="form-control">
+		 		<option value="geral">Geral</option>
+		 		<option value="fantasia" disabled>Fantasia Medieval</option>
+		 		<option value="moderno" disabled>Mundo Moderno</option>
+		 		<option value ="supers" disabled>Super heróis</option>
+		 		<option value="cyberpunk" disabled>Cyberpunk</option>
+		 		<option value="pokemon" disabled>Pokemon</option>
+			</select>
+			<button onclick="finalizarSessao();">
+				Imprimir log
+			</button>
+			<button onclick="escreverLog('A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.')">
+				lorem
+			</button>
+			<button onclick="escreverLog('asd')">
+				Preencher
+			</button>
+		</div>
+		<div id="log" class="col-sm-6">
+			<button onclick="sessaoInicio()">
+				Iniciar nova sessão
+			</button>
+
+		</div>
+	</div>
+
+</div>
