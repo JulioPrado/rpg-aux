@@ -27,6 +27,23 @@ $(document).ready(function(){
 		
 });
 
+function adicionarCampo(){
+	var texto=document.getElementById('campo').value;
+	escreverLog("<span style='font-weight: bolder;' >Inserido manualmente</span>: "+texto);
+	scrollParaLog();
+	texto=document.getElementById('campo').value='';
+}
+
+
+function scrollParaLog(){
+	let divTopo = document.querySelector('#log').offsetTop; /* topo do elemento */
+
+  	window.scroll({
+  		top: divTopo,
+    	behavior: "smooth"
+  	});
+}
+
 function escreverLog(texto){
 	var data = new Date();
 
@@ -40,15 +57,6 @@ function escreverLog(texto){
 		}
 
 	$('div#log').prepend("<span style='color:blue'>"+hora + ':' + min+'</span>: '+texto+'<br/>');
-}
-
-function finalizarSessao(){
-    var conteudo = document.getElementById('log').innerHTML;
-	var telaImpressao = window.open('about:blank');
-
-	telaImpressao.document.write(conteudo);
-	telaImpressao.window.print();
-	telaImpressao.window.close();
 }
 
 function sessaoInicio(){
@@ -96,7 +104,40 @@ function sessaoInicio(){
 	
 
 	$('div#log').prepend("<h3 style='color:red;'>Iniciando sessão: "+dia_sem+', ' + str_data + ' às ' + str_hora+'</h3>');
+	scrollParaLog();
 }
+
+/* testes *******************************************/
+function lorem(texto){
+	for (var i = 0; i<40;i++) {
+		escreverLog(texto+' pela '+i+' vez.');
+	}
+}
+
+/* impressão **************************************/
+function finalizaImprime1(){
+
+	$('#log')
+		.removeClass('col-sm-6')
+		.addClass('imprimir');
+
+	window.print();
+
+	$('#log')
+		.addClass('col-sm-6')
+		.removeClass('imprimir');	
+}
+
+function finalizaImprime2(){
+	var conteudo = document.getElementById('log').innerHTML;
+	var telaImpressao = window.open('about:blank');
+
+	telaImpressao.document.write(conteudo);
+	telaImpressao.window.print();
+	telaImpressao.window.close();
+}
+
+/* Oraculos *********************/
 
 function tipoOraculo(tipo){
 

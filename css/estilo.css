@@ -82,9 +82,10 @@ div.row div{
 /* Oráculos ***************************************/
 
 div#log{
+	margin-top: 15px;
 	border: 1px solid black;	
 	border-radius: 1%;
-	height: 300px;
+	height: 500px;
 	overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -96,16 +97,11 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
-.vermelho{
-	color: red;
-}
-
-.negrito{
-	font-weight: bolder;
-}
-
-.azul{
-	color: blue;
+div#log.imprimir{
+	padding: 20px;
+	height: auto!important;
+	overflow-y: hidden;
+	border: none;
 }
 
 /* Imagens *************************************************/
@@ -131,6 +127,26 @@ body{
 
 /* Media Queries *************************************************/
 
+@media print {
+	body{
+			/*font-size: 1.3em!important;*/
+		}	
+	  body * {
+	   visibility: hidden;
+	  }
+
+	  #log, #log * {
+	    visibility: visible;
+	  }
+
+	  #log {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	  }
+		
+}
 
 @media (max-width: 575.98px) {
 	

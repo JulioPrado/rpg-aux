@@ -2,32 +2,98 @@
 
 	<h3>Oráculos para RPG Solo</h3>
 
-	
-	
 	<div class="row">
 		<div id="botoes" class="col-sm-6">
+
+			<span>1º Selecione o tipo de cenário:</span>
 			<select onchange="tipoOraculo(value);" class="form-control">
-		 		<option value="geral">Geral</option>
+		 		<option value="geral" active>Geral</option>
 		 		<option value="fantasia" disabled>Fantasia Medieval</option>
 		 		<option value="moderno" disabled>Mundo Moderno</option>
 		 		<option value ="supers" disabled>Super heróis</option>
 		 		<option value="cyberpunk" disabled>Cyberpunk</option>
 		 		<option value="pokemon" disabled>Pokemon</option>
 			</select>
-			<button onclick="finalizarSessao();">
-				Imprimir log
+			<hr>
+			<span>2º Inicie a sessão:</span>
+			<button class="btn btn-sm btn-danger" onclick="sessaoInicio()">
+				Limpar e Iniciar nova sessão
+			</button><br/>
+			<hr>
+				Faça as perguntas que quiser para o desenvolvimento da sua história:
+				<br>
+				<button class="btn btn-sm btn-primary" onclick="">
+				Sim e não
+				</button>
+				<button class="btn btn-sm btn-warning" onclick="">
+				Missão
+				</button>
+				<button class="btn btn-sm btn-warning" onclick="">
+				Complicação
+				</button>
+				<button class="btn btn-sm btn-warning" onclick="">
+				Reviravolta
+				</button>
+				<button class="btn btn-sm btn-warning" onclick="">
+				Ação de combate
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
+				Gancho
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
+				Pessoa
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
+				Coisa
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
+				Lugar
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
+				Vegetação
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				Nome de personagem
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				Relacionamento
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				Desejos e Objetivos
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				Postura
+				</button>
+			<hr>
+			Se quiser, também pode escrever algo diretamente no histórico:
+			<br>
+			<input id="campo" class="form-control" type="text" placeholder="Digite aqui">
+			<button onclick="adicionarCampo();" class="btn btn-danger">
+				Adicionar ao histórico
 			</button>
-			<button onclick="escreverLog('A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.')">
+			<hr>
+			<span>Quando finalizar, fique à vontade para imprimir o histórico do oráculo em uma das opções:</span>
+			<br>
+			<button class="btn btn-sm btn-danger" onclick="finalizaImprime1();">
+				Imprimir 1ª opção
+			</button>
+			<button class="btn btn-sm btn-secondary" onclick="finalizaImprime2();">
+				Imprimir 2ª opção
+			</button>
+
+			<hr>
+			<h4>Botões de teste</h4>
+			<button class="btn btn-light" onclick="lorem('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac volutpat metus. Cras consequat ac justo et pellentesque. Pellentesque posuere at dui sed rutrum. Curabitur commodo eros quis dui vulputate rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer maximus, tortor sed semper semper, mi quam ullamcorper felis, eu cursus nisl sapien nec lectus. Pellentesque mollis ornare ipsum quis sollicitudin. Etiam ultricies aliquet ex. Praesent venenatis sem quis libero pulvinar venenatis.')">
 				lorem
 			</button>
-			<button onclick="escreverLog('asd')">
+			<button class="btn btn-light" onclick="escreverLog('asd')">
 				Preencher
 			</button>
+			
 		</div>
+
 		<div id="log" class="col-sm-6">
-			<button onclick="sessaoInicio()">
-				Iniciar nova sessão
-			</button>
+			
 
 		</div>
 	</div>
