@@ -59,52 +59,55 @@ function escreverLog(texto){
 	$('div#log').prepend("<span style='color:blue'>"+hora + ':' + min+'</span>: '+texto+'<br/>');
 }
 
+
 function sessaoInicio(){
-	$('div#log').html('');
+	if (confirm("Tem certeza de que quer apagar o histórico e iniciar uma nova sessão?")) {
+		$('div#log').html('');
 
 
-		// Obtém a data/hora atual
-	var data = new Date();
+			// Obtém a data/hora atual
+		var data = new Date();
 
-	// Guarda cada pedaço em uma variável
-	var dia     = data.getDate();           // 1-31
-	var dia_sem = data.getDay();            // 0-6 (zero=domingo)
-	var mes     = data.getMonth()+1;          // 0-11 (zero=janeiro)
-		if (mes<10) {
-			mes = '0'+mes;
+		// Guarda cada pedaço em uma variável
+		var dia     = data.getDate();           // 1-31
+		var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+		var mes     = data.getMonth()+1;          // 0-11 (zero=janeiro)
+			if (mes<10) {
+				mes = '0'+mes;
+			}
+		var ano2    = data.getYear();           // 2 dígitos
+		var ano4    = data.getFullYear();       // 4 dígitos
+		var hora    = data.getHours();          // 0-23
+			if (hora<10) {
+				hora = '0'+hora;
+			}
+		var min     = data.getMinutes();        // 0-59
+			if (min<10) {
+				min = '0'+min;
+			}
+		var seg     = data.getSeconds();        // 0-59
+		var mseg    = data.getMilliseconds();   // 0-999
+		var tz      = data.getTimezoneOffset(); // em minutos
+
+		// Formata a data e a hora
+		var str_data = dia + '/' + (mes) + '/' + ano4;
+		var str_hora = hora + ':' + min/*+ ':' + seg*/;
+
+		switch(dia_sem){
+			case 0 : dia_sem='Domingo'; break;
+			case 1 : dia_sem='Segunda-feira'; break;
+			case 2 : dia_sem='Terça-feira'; break;
+			case 3 : dia_sem='Quarta-feira'; break;
+			case 4 : dia_sem='Quinta-feira'; break;
+			case 5 : dia_sem='Sexta-feira'; break;
+			case 6 : dia_sem='Sábado'; break;
+			default: dia_sem="Dia da semana inválido.";
 		}
-	var ano2    = data.getYear();           // 2 dígitos
-	var ano4    = data.getFullYear();       // 4 dígitos
-	var hora    = data.getHours();          // 0-23
-		if (hora<10) {
-			hora = '0'+hora;
-		}
-	var min     = data.getMinutes();        // 0-59
-		if (min<10) {
-			min = '0'+min;
-		}
-	var seg     = data.getSeconds();        // 0-59
-	var mseg    = data.getMilliseconds();   // 0-999
-	var tz      = data.getTimezoneOffset(); // em minutos
+		
 
-	// Formata a data e a hora
-	var str_data = dia + '/' + (mes) + '/' + ano4;
-	var str_hora = hora + ':' + min/*+ ':' + seg*/;
-
-	switch(dia_sem){
-		case 0 : dia_sem='Domingo'; break;
-		case 1 : dia_sem='Segunda-feira'; break;
-		case 2 : dia_sem='Terça-feira'; break;
-		case 3 : dia_sem='Quarta-feira'; break;
-		case 4 : dia_sem='Quinta-feira'; break;
-		case 5 : dia_sem='Sexta-feira'; break;
-		case 6 : dia_sem='Sábado'; break;
-		default: dia_sem="Dia da semana inválido.";
+		$('div#log').prepend("<h3 style='color:red;'>Iniciando sessão: "+dia_sem+', ' + str_data + ' às ' + str_hora+'</h3>');
+		scrollParaLog();
 	}
-	
-
-	$('div#log').prepend("<h3 style='color:red;'>Iniciando sessão: "+dia_sem+', ' + str_data + ' às ' + str_hora+'</h3>');
-	scrollParaLog();
 }
 
 /* testes *******************************************/
@@ -117,15 +120,12 @@ function lorem(texto){
 /* impressão **************************************/
 function finalizaImprime1(){
 
-	$('#log')
-		.removeClass('col-sm-6')
-		.addClass('imprimir');
+	var conteudoDiv = $('#log').html();
 
-	window.print();
+	$('#divImprimir').html(conteudoDiv);
+    window.print();
 
-	$('#log')
-		.addClass('col-sm-6')
-		.removeClass('imprimir');	
+    $('#divImprimir').html('');
 }
 
 function finalizaImprime2(){
@@ -136,6 +136,7 @@ function finalizaImprime2(){
 	telaImpressao.window.print();
 	telaImpressao.window.close();
 }
+
 
 /* Oraculos *********************/
 

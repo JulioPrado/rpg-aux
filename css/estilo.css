@@ -135,11 +135,11 @@ div#log.imprimir{
 	   visibility: hidden;
 	  }
 
-	  #log, #log * {
+	  #divImprimir, #divImprimir * {
 	    visibility: visible;
 	  }
 
-	  #log {
+	  #divImprimir{
 	    position: absolute;
 	    left: 0;
 	    top: 0;

@@ -14,34 +14,45 @@
 		 		<option value="cyberpunk" disabled>Cyberpunk</option>
 		 		<option value="pokemon" disabled>Pokemon</option>
 			</select>
-			<hr>
+			<br/>
 			<span>2º Inicie a sessão:</span>
 			<button class="btn btn-sm btn-danger" onclick="sessaoInicio()">
 				Limpar e Iniciar nova sessão
 			</button><br/>
-			<hr>
-				Faça as perguntas que quiser para o desenvolvimento da sua história:
-				<br>
-				<button class="btn btn-sm btn-primary" onclick="">
-				Sim e não
+			<br/>
+				3º Faça as perguntas que quiser para o desenvolvimento da sua história:
+				<br/><br/>
+				Sim e não:
+				<br/>
+				<button class="btn btn-sm btn-success" onclick="">
+				Muito Provável
 				</button>
-				<button class="btn btn-sm btn-warning" onclick="">
+				<button class="btn btn-sm btn-success" onclick="">
+				Provável
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				50/50
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				Improvável
+				</button>
+				<button class="btn btn-sm btn-success" onclick="">
+				Muito improvável
+				</button>
+				<br/>
+				Oráculos gerais:
+				<br/>
+				<button class="btn btn-sm btn-info" onclick="">
 				Missão
 				</button>
-				<button class="btn btn-sm btn-warning" onclick="">
+				<button class="btn btn-sm btn-info" onclick="">
 				Complicação
 				</button>
-				<button class="btn btn-sm btn-warning" onclick="">
+				<button class="btn btn-sm btn-info" onclick="">
 				Reviravolta
-				</button>
-				<button class="btn btn-sm btn-warning" onclick="">
-				Ação de combate
 				</button>
 				<button class="btn btn-sm btn-info" onclick="">
 				Gancho
-				</button>
-				<button class="btn btn-sm btn-info" onclick="">
-				Pessoa
 				</button>
 				<button class="btn btn-sm btn-info" onclick="">
 				Coisa
@@ -52,17 +63,26 @@
 				<button class="btn btn-sm btn-info" onclick="">
 				Vegetação
 				</button>
-				<button class="btn btn-sm btn-success" onclick="">
+				<br/>
+				Oráculos Personagens:
+				<br/>
+				<button class="btn btn-sm btn-info" onclick="">
+				Pessoa
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
 				Nome de personagem
 				</button>
-				<button class="btn btn-sm btn-success" onclick="">
+				<button class="btn btn-sm btn-info" onclick="">
 				Relacionamento
 				</button>
-				<button class="btn btn-sm btn-success" onclick="">
+				<button class="btn btn-sm btn-info" onclick="">
 				Desejos e Objetivos
 				</button>
-				<button class="btn btn-sm btn-success" onclick="">
+				<button class="btn btn-sm btn-info" onclick="">
 				Postura
+				</button>
+				<button class="btn btn-sm btn-info" onclick="">
+				Ação de combate
 				</button>
 			<hr>
 			Se quiser, também pode escrever algo diretamente no histórico:
@@ -74,13 +94,14 @@
 			<hr>
 			<span>Quando finalizar, fique à vontade para imprimir o histórico do oráculo em uma das opções:</span>
 			<br>
-			<button class="btn btn-sm btn-danger" onclick="finalizaImprime1();">
-				Imprimir 1ª opção
-			</button>
-			<button class="btn btn-sm btn-secondary" onclick="finalizaImprime2();">
-				Imprimir 2ª opção
-			</button>
-
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<button class="btn btn-sm btn-danger" onclick="finalizaImprime1();">
+				Imprimir
+				</button>
+				<button class="btn btn-sm btn-secondary" onclick="finalizaImprime2();">
+				Imprimir
+				</button>
+			</div>
 			<hr>
 			<h4>Botões de teste</h4>
 			<button class="btn btn-light" onclick="lorem('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac volutpat metus. Cras consequat ac justo et pellentesque. Pellentesque posuere at dui sed rutrum. Curabitur commodo eros quis dui vulputate rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer maximus, tortor sed semper semper, mi quam ullamcorper felis, eu cursus nisl sapien nec lectus. Pellentesque mollis ornare ipsum quis sollicitudin. Etiam ultricies aliquet ex. Praesent venenatis sem quis libero pulvinar venenatis.')">
@@ -96,6 +117,11 @@
 			
 
 		</div>
+	</div>
+
+	<div id="divImprimir">
+			
+
 	</div>
 
 </div>
