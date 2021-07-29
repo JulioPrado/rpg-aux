@@ -141,7 +141,6 @@ function finalizaImprime2(){
 /* Oraculos *********************/
 
 var tipoCenario = 'geral'
-var arrayAux=[];
 
 function randomAte(numMaximo){
 	 /* 
@@ -149,7 +148,7 @@ function randomAte(numMaximo){
 	 se colocar numMaximo+1 no argumento, 
 	 vai de 1 até numMaximo.
 	 */
-	return Math.floor(Math.random()*(numMaximo));
+	return Math.floor(Math.random()*(numMaximo+1));
 }
 
 function randomEntre(min,max){
@@ -222,16 +221,113 @@ function simeNao(chance){
 	escreverLog(string);
 }
 
+function uneArrays(tipo){
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat('lista'+tipo);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(tipo+'Fantasia','lista'+tipo);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(tipo+'Moderno','lista'+tipo);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(tipo+'Supers','lista'+tipo);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(tipo+'Cyberpunk','lista'+tipo);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(tipo+'Pokemon','lista'+tipo);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
+	return arrayAux;
+}
+
 function reviravolta(){
-	escreverLog("<span style='font-weight: bolder'>Reviravolta: </span>"+listaReviravolta[randomEntre(0,listaReviravolta.length-1)]);
+	let arrayAux=uneArrays('reviravolta');
+	escreverLog("<span style='font-weight: bolder'>Reviravolta: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function relacionamento(){
+	let arrayAux=uneArrays('relacionamento');
+	escreverLog("<span style='font-weight: bolder'>Relacionamento: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function lugarNatureza(){
+	let arrayAux=uneArrays('natureza');
+	escreverLog("<span style='font-weight: bolder'>Lugar: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function lugarUrbano(){
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listaurbano);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(urbanoFantasia,listaurbano);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(urbanoModerno,listaurbano);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(urbanoSupers,listaurbano);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(urbanoCyberpunk,listaurbano);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(urbanoPokemon,listaurbano);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
+	escreverLog("<span style='font-weight: bolder'>Lugar: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function complicacao(){
+	let arrayAux=uneArrays('complicacao');
+	escreverLog("<span style='font-weight: bolder'>Complicação: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function gancho(){
+	let arrayAux=uneArrays('gancho');
+	escreverLog("<span style='font-weight: bolder'>Gancho: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function pessoa(){
+	let arrayAux=uneArrays('pessoa');
+	escreverLog("<span style='font-weight: bolder'>Pessoa: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function coisa(){
+	let arrayAux=uneArrays('coisa');
+	escreverLog("<span style='font-weight: bolder'>Coisa: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function nomeAtual(){
+	escreverLog("<span style='font-weight: bolder'>Nome atual: </span>"+listaNome[randomEntre(0,listaNome.length-1)]+' '+listaSobrenome[randomEntre(0,listaSobrenome.length-1)]);
 }
 
 function acaoCombate(){
 	escreverLog("<span style='font-weight: bolder'>Ação de combate: </span>"+listaAcoesCombate[randomEntre(0,listaAcoesCombate.length-1)]);
-}
-
-function relacionamento(){
-	escreverLog("<span style='font-weight: bolder'>Relacionamento: </span>"+listaRelacionamento[randomEntre(0,listaRelacionamento.length-1)]);
 }
 
 function posturaPDM(){
@@ -242,16 +338,132 @@ function vegetacao(){
 	escreverLog("<span style='font-weight: bolder'>Vegetação: </span>"+listaVegetacao[randomEntre(0,listaVegetacao.length-1)]);
 }
 
-function lugarNatureza(){
-	escreverLog("<span style='font-weight: bolder'>Lugar: </span>"+listaLugarNatureza[randomEntre(0,listaLugarNatureza.length-1)]);
+
+function nomeFantasia(){
+
+	function gerarNome(){
+		let quantidadeDeSilabas= randomEntre(2,3);
+		console.log(quantidadeDeSilabas);
+		let nome="";
+
+		for (contadorSilaba=1;contadorSilaba<=quantidadeDeSilabas;contadorSilaba++){
+
+			if (contadorSilaba>1) {
+				nome= nome + consoanteAleatoria() + vogalAleatoria() ;
+			}else{
+				nome= nome + consoanteAleatoria().toUpperCase() + vogalAleatoria() ;
+			}
+		}	
+
+		function vogalAleatoria(){
+
+		  let listaVogais="aeiou";
+		  let numeroAleatorio=randomEntre(1, listaVogais.length);
+
+		  return listaVogais.substring(numeroAleatorio-1,numeroAleatorio);
+		}
+
+		function consoanteAleatoria(){
+
+		  let listaConsoantes="bcdfghjklmnpqrstwvxyz";
+		  let numeroAleatorio=randomEntre(1, listaConsoantes.length);
+
+		  return listaConsoantes.substring(numeroAleatorio-1,numeroAleatorio);
+		}
+		return nome;
+	}
+	escreverLog("<span style='font-weight: bolder'>Nome fantasia: </span>"+gerarNome()+' '+gerarNome());
 }
 
-function complicacoes(){
-	escreverLog("<span style='font-weight: bolder'>Complicações: </span>"+listaComplicacoes[randomEntre(0,listaComplicacoes.length-1)]);
+function desejosObjetivos(){
+	let desejo ='';
+	let lista=[];
+
+	switch(randomAte(5)){
+		case 0: //escapar
+			desejo='Escapar ';
+			lista.push(
+				'do passado',
+				'de um inimigo poderoso',
+				'de um compromisso',
+				'de um segredo',
+				'de uma dívida',
+				'de um lugar'
+			);
+		break;
+
+		case 1: //proteger
+			desejo='Proteger ';
+			lista.push(
+				'família ou amigos',
+				'a honra',
+				'sua reputação',
+				'um pupilo',
+				'um grupo',
+				'um objeto especial'
+			);
+		break;
+
+		case 2: //descobrir
+			desejo='Descobrir ';
+			lista.push(
+				'um segredo',
+				'um lugar',
+				'a identidade de alguém',
+				'a solução para um problema',
+				'quem fez isso com ele',
+				'o paradeiro de alguém ou algo'
+			);
+		break;
+
+		case 3: //obter
+			desejo='Obter ';
+			lista.push(
+				'um item',
+				'admiração ou respeito',
+				'glória',
+				'poder',
+				'riqueza',
+				'uma posição',
+				'fama'
+			);
+		break;
+
+		case 4: //eliminar
+			desejo='Eliminar ';
+			lista.push(
+				'um inimigo antigo',
+				'um monstro',
+				'um rival',
+				'alguém importante',
+				'uma organização',
+				'uma comunidade',
+				'uma maldição'
+			);
+		break;
+
+		case 5: //mudar
+			desejo='Mudar ';
+			lista.push(
+				'de local',
+				'de classe social',
+				'de vida',
+				'de amigos',
+				'de carreira',
+				'de estilo de vida'
+			);
+		break;
+
+		default: alert('Opção inválida!');
+	}
+
+	desejo+=lista[randomAte(lista.length-1)];
+
+	escreverLog("<span style='font-weight: bolder'>Desejo/Objetivo do PDM: </span>"+desejo);
 }
 
-/* Listas *************************************************/
-var listaReviravolta=
+/* REVIRAVOLTA *************************************************/
+var listareviravolta=
 [
 'A aventura toda é uma brincadeira de uma divindade má.',
 'A aventura toda é uma ilusão ou sonho.',
@@ -286,22 +498,34 @@ var listaReviravolta=
 'Você percebe que estava do lado errado o tempo todo.'
 ];
 
-var listaAcoesCombate=
+var reviravoltaFantasia=
 [
-'Ataque à Dist buffado.',
-'Ataque à Dist normal.',
-'Ataque CaC buffado.',
-'Ataque CaC normal.',
-'Ataque furtivo.',
-'Fugir/Ir embora.',
-'Manobra Tática.',
-'Postura Defensiva.',
-'Proteger.',
-'Tentar desarmar (se possível).',
-'Tentar imobilizar (se possível).'
+
 ];
 
-var listaRelacionamento=
+var reviravoltaModerno=
+[
+
+];
+
+var reviravoltaSupers=
+[
+
+];
+
+var reviravoltaCyberpunk=
+[
+
+];
+
+var reviravoltaPokemon=
+[
+
+];
+
+
+/* RELACIONAMENTO **************************************/
+var listarelacionamento=
 [
 'Abençoados pelo mesmo Deus/ Seguidores da mesma fé.',
 'Aliados relutantes.',
@@ -340,29 +564,35 @@ var listaRelacionamento=
 'Um sabe o segredo do outro.'
 ];
 
-var listaPostura=[
-'Agressivo',
-'Amistoso',
-'Antipático',
-'Atencioso',
-'Desconfiado',
-'Neutro/Quieto'
+
+var relacionamentoFantasia=
+[
+
 ];
 
-var listaVegetacao=[
-'Deserto',
-'Estepe',
-'Floresta Boreal (Taiga)',
-'Floresta de Coníferas',
-'Floresta temperada',
-'Floresta tropical',
-'Savana',
-'Tundra',
-'Vegetação de altitude',
-'Vegetação Mediterrânea'
+var relacionamentoModerno=
+[
+
 ];
 
-var listaLugarNatureza=[
+var relacionamentoSupers=
+[
+
+];
+
+var relacionamentoCyberpunk=
+[
+
+];
+
+var relacionamentoPokemon=
+[
+
+];
+
+/* NATUREZA *******************************************/
+
+var listanatureza=[
 'Abismo',
 'Arquipélago',
 'Cachoeira',
@@ -399,7 +629,102 @@ var listaLugarNatureza=[
 'Vulcão'
 ];
 
-var listaComplicacoes=
+var naturezaFantasia=
+[
+
+];
+
+var naturezaModerno=
+[
+
+];
+
+var naturezaSupers=
+[
+'planeta distante',
+'planeta próximo',
+'Outro plano',
+'Outra dimensão'
+];
+
+var naturezaCyberpunk=
+[
+
+];
+
+var naturezaPokemon=
+[
+
+];
+
+/* LUGAR URBANO ******************************************/
+
+var listaurbano=
+[
+'Armazém',
+'Bazar',
+'Bordel',
+'Centro comercial',
+'Centro da cidade',
+'Cidade distante',
+'Cripta',
+'Depósito',
+'Esgotos/subterrâneo',
+'Galpão abandonado',
+'Jardim',
+'Loja de armas',
+'Mansão',
+'Nas nuvens',
+'Necrotério, cemitério',
+'País distante',
+'Praça',
+'Prédio',
+'Prisão',
+'Templo'
+];
+
+var urbanoFantasia=
+[
+'Palácio',
+'Catacumbas',
+'Fortaleza',
+'Torre',
+'Santuário',
+'tumba',
+'Taverna',
+'Estalagem',
+'Loja de suprimentos',
+'Forja',
+'A casa Nobre',
+'lugar místico',
+'ruínas antigas',
+'Reino secreto',
+'castelo'
+];
+
+var urbanoModerno=
+[
+
+];
+
+var urbanoSupers=
+[
+
+];
+
+var urbanoCyberpunk=
+[
+
+];
+
+var urbanoPokemon=
+[
+
+];
+
+/* COMPLICAÇÃO ***************************************/
+
+var listacomplicacao=
 [
 'Guardas armados.',
 'Assassinos.',
@@ -433,4 +758,1038 @@ var listaComplicacoes=
 'Aparece uma nova ameaça.',
 'Um importante pertence seu foi roubado.',
 'O vilão coloca sua cabeça à prêmio.'
+];
+
+var complicacaoFantasia=
+[
+
+];
+
+var complicacaoModerno=
+[
+
+];
+
+var complicacaoSupers=
+[
+
+];
+
+var complicacaoCyberpunk=
+[
+
+];
+
+var complicacaoPokemon=
+[
+
+];
+
+/* GANCHO *****************************************/
+
+var listagancho=[
+'Chantageado',
+'Deixado para morrer',
+'Entrou na situação por acaso',
+'Fez uma aposta',
+'Foi contratado para isso',
+'Injustiçado e querendo vingança',
+'Ordens de um superior',
+'Ouviu uma conversa',
+'Pagando uma dívida',
+'Para provar sua coragem',
+'Pedido um favor',
+'Perdido ou Náufrago',
+'Preso e forçado a entrar em serviço',
+'Teve um sonho'
+];
+
+var ganchoFantasia=
+[
+'Amaldiçoado por um deus',
+'Encontrou mapa antigo',
+'Teve uma visão',
+'Ouviu uma profecia',
+'Ouviu uma música ou poema',
+'Leu um pergaminho antigo'
+];
+
+var ganchoModerno=
+[
+
+];
+
+var ganchoSupers=
+[
+
+];
+
+var ganchoCyberpunk=
+[
+
+];
+
+var ganchoPokemon=
+[
+
+];
+
+/* PESSOA ************************************************/
+var listapessoa=
+[
+'Agente da lei',
+'Animal/Ser',
+'Aprendiz',
+'Artesã/o',
+'Artista',
+'Assassino/a',
+'Criminoso/a',
+'Dançarino/a',
+'Espiã/o',
+'Estudioso/a',
+'Familiar',
+'Fugitivo/a',
+'Grupo',
+'Ladrão',
+'Mendigo/a',
+'Mercenário/a',
+'Organização',
+'Poeta/isa',
+'Político',
+'Prisioneiro/a',
+'Prostituta/o',
+'Refém',
+'Refugiado/a',
+'Rival',
+'Torturador/a',
+'Traficante',
+'Uma criança'
+];
+
+var pessoaFantasia=
+[
+'Nobre',
+'Camponês/a',
+'Pirata',
+'Sacerdote/isa',
+'Servo/a',
+'Mago/a',
+'Guerreiro/a',
+'Monge',
+'Druida',
+'Arqueiro',
+'Rei/Rainha',
+'Principe/Princesa',
+'Bárbaro',
+'Bardo/a',
+'Paladino/a',
+'Patrulheiro/a',
+'Feiticeiro/a',
+'Ladino/a',
+'Bruxo/a',
+'Xamã',
+'Halfling',
+'Orc',
+'Humano/a',
+'Anã/o',
+'Élfo/a',
+'Necromante',
+'Lich',
+'Espírito',
+'Demônio',
+'Fantasma',
+'Ferreiro/a',
+'Herói/na famoso/a',
+'Sociedade secreta'
+];
+
+var pessoaModerno=
+[
+
+];
+
+var pessoaSupers=
+[
+
+];
+
+var pessoaCyberpunk=
+[
+
+];
+
+var pessoaPokemon=
+[
+
+];
+
+/* COISA ********************************************/
+
+var listacoisa=
+[
+'Anel',
+'Artefato',
+'Baú',
+'Capa',
+'Carga',
+'Carta',
+'Chave',
+'Culto',
+'Disputa',
+'Estatueta',
+'Guerra',
+'Identidade secreta',
+'Jóia',
+'Livro',
+'Máscara',
+'Meteorito',
+'Passado',
+'Paradeiro de alguém',
+'Política',
+'Quadro',
+'Respeito de alguém',
+'Riqueza de alguém',
+'Segredo',
+'Uma cerimônia'
+];
+
+var coisaFantasia=
+[
+'Coroa',
+'Cristal',
+'Adaga',
+'Elmo',
+'Ídolo',
+'Lente',
+'Sarcófago',
+'Pergaminho',
+'Selo',
+'Caveira',
+'Espada',
+'Tomo',
+'Tesouro',
+'Caravana'
+];
+
+var coisaModerno=
+[
+
+];
+
+var coisaSupers=
+[
+
+];
+
+var coisaCyberpunk=
+[
+
+];
+
+var coisaPokemon=
+[
+
+];
+
+/* ORACULOS GERAIS *********************************/
+
+var listaPostura=[
+'Agressivo',
+'Amistoso',
+'Antipático',
+'Atencioso',
+'Desconfiado',
+'Neutro',
+'Quieto'
+];
+
+var listaAcoesCombate=
+[
+'Ataque à Dist melhorado',
+'Ataque à Dist normal.',
+'Ataque CaC melhorado.',
+'Ataque CaC normal.',
+'Ataque furtivo.',
+'Fugir/Ir embora.',
+'Manobra Tática.',
+'Postura Defensiva.',
+'Proteger.',
+'Tentar desarmar (se possível).',
+'Tentar imobilizar (se possível).'
+];
+
+var listaVegetacao=[
+'Deserto',
+'Estepe',
+'Floresta Boreal (Taiga)',
+'Floresta de Coníferas',
+'Floresta temperada',
+'Floresta tropical',
+'Savana',
+'Tundra',
+'Vegetação de altitude',
+'Vegetação Mediterrânea'
+];
+
+var listaFerimento=[
+	'ombro esquerdo com ferimento',
+	'ombro esquerdo quebrado',
+	'braço esquerdo com ferimento',
+	'braço esquerdo quebrado',
+	'cotovelo esquerdo com ferimento',
+	'cotovelo esquerdo quebrado',
+	'antebraço esquerdo com ferimento',
+	'antebraço esquerdo quebrado',
+	'mão esquerda com ferimento',
+	'mão esquerda quebrada',
+	'ombro direito com ferimento',
+	'ombro direito quebrado',
+	'braço direito com ferimento',
+	'braço direito quebrado',
+	'cotovelo direito com ferimento',
+	'cotovelo direito quebrado',
+	'antebraço direito com ferimento',
+	'antebraço direito quebrado',
+	'mão direita com ferimento',
+	'mão direita quebrada',
+	'coxa esquerda com ferimento',
+	'fêmur esquerdo quebrado',
+	'joelho esquerdo com ferimento',
+	'joelho esquerdo quebrado',
+	'pé esquerdo com ferimento',
+	'pé esquerdo quebrado',
+	'coxa direita com ferimento',
+	'fêmur direito quebrado',
+	'joelho direito com ferimento',
+	'joelho direito quebrado',
+	'pé direito com ferimento',
+	'pé direito quebrado',
+	'ferimento no pescoço',
+	'ferimento no tórax',
+	'ferimento nas costas',
+	'ferimento na barriga',
+	'ferimento nas costelas',
+	'ferimento na nuca',
+	'ferimento nos olhos',
+	'ferimento no rosto',
+	'ferimento na boca'
+];
+
+var listaNome=
+[
+	'Santiago',
+	'Francisco',
+	'João',
+	'Afonso',
+	'Rodrigo',
+	'Martim',
+	'Tomás',
+	'Miguel',
+	'Gabriel',
+	'Lourenço',
+	'Rafael',
+	'Lucas',
+	'Guilherme',
+	'Pedro',
+	'Tiago',
+	'Diogo',
+	'Vicente',
+	'José',
+	'David',
+	'Mateus',
+	'Simão',
+	'Antônio',
+	'Diego',
+	'Manuel',
+	'Henrique',
+	'Daniel',
+	'Bernardo',
+	'Enzo',
+	'André',
+	'Leonardo',
+	'Luis',
+	'Isaque',
+	'Eduardo',
+	'Alexandre',
+	'Kevin',
+	'Matias',
+	'Leandro',
+	'Felipe',
+	'Xavier',
+	'Samuel',
+	'Ricardo',
+	'Arthur',
+	'Valentim',
+	'Frederico',
+	'Lorenzo',
+	'Bryan',
+	'Bruno',
+	'Benjamin',
+	'Carlos',
+	'Sebastião',
+	'Noah',
+	'Mário',
+	'Tomé',
+	'Fábio',
+	'Paulo',
+	'Renato',
+	'Jorge',
+	'Jaime',
+	'Ângelo',
+	'Micael',
+	'Ivan',
+	'Cristiano',
+	'Jonathan',
+	'Sérgio',
+	'Gil',
+	'Ivo',
+	'Vitor',
+	'Yuri',
+	'Fernando',
+	'Dilan',
+	'Romeu',
+	'Caio',
+	'Emanuel',
+	'Sandro',
+	'Igor',
+	'Moisés',
+	'Mauro',
+	'Cesar',
+	'Josué',
+	'Edgar',
+	'Elias',
+	'Joel',
+	'Alex',
+	'Denis',
+	'Marcelo',
+	'Adriel',
+	'Álvaro',
+	'Dylan',
+	'Raul',
+	'Mohamed',
+	'Nelson',
+	'Dário',
+	'Oliver',
+	'Ismael',
+	'Márcio',
+	'Ian',
+	'Erick',
+	'Cláudio',
+	'Heitor',
+	'Martinho',
+	'Jonas',
+	'Júlio',
+	'Adriano',
+	'Augusto',
+	'Flávio',
+	'Jason',
+	'James',
+	'Danilo',
+	'Adam',
+	'Levi',
+	'Nicolas',
+	'Sebastian',
+	'Cauã',
+	'Misael',
+	'Alberto',
+	'Israel',
+	'Edson',
+	'Luan',
+	'Denzel',
+	'Apolo',
+	'Alfredo',
+	'Nicolau',
+	'Axel',
+	'Patrick',
+	'Giovani',
+	'Aron',
+	'Luiz',
+	'Leonel',
+	'Wesley',
+	'Ari',
+	'Roberto',
+	'Hélder',
+	'Roberta',
+	'Henry',
+	'Cristóvão',
+	'Jesus',
+	'Nathan',
+	'Rogério',
+	'Caleb',
+	'Fabrício',
+	'Valentino',
+	'Noé',
+	'Luka',
+	'Armando',
+	'Stéfano',
+	'Bartolomeu',
+	'Anthony',
+	'Derick',
+	'Ryan',
+	'Luciano',
+	'Theo',
+	'Christian',
+	'Anderson',
+	'Abel',
+	'Nataniel',
+	'Dominick',
+	'Alexander',
+	'Isaías',
+	'Amadeu',
+	'Oscar',
+	'Lázaro',
+	'Ulisses',
+	'Max',
+	'Steven',
+	'Leon',
+	'Maurício',
+	'Juliano',
+	'Osvaldo',
+	'Edward',
+	'Jayden',
+	'Olavo',
+	'Saulo',
+	'Pietro',
+	'Breno',
+	'Jair',
+	'Uriel',
+	'Adiel',
+	'Fred',
+	'Jack',
+	'Evandro',
+	'Juan',
+	'Ruan',
+	'Rauny',
+	'Tainan',
+	'Igor',
+	'Fabiano',
+	'Robert',
+	'Hélio',
+	'Adilson',
+	'Elder',
+	'Éder',
+	'Jordan',
+	'Tito',
+	'Júnior',
+	'Alonso',
+	'George',
+	'Jorge',
+	'Félix',
+	'Gilson',
+	'Gilberto',
+	'Abner',
+	'Wagner',
+	'Adolfo',
+	'Salomão',
+	'Kauan',
+	'Nilson',
+	'Willian',
+	'Tobias',
+	'Julian',
+	'Jacob',
+	'Vladmir',
+	'Yan',
+	'Harry',
+
+
+	'Maria',
+	'Leonor',
+	'Matilde',
+	'Beatriz',
+	'Carolina',
+	'Mariana',
+	'Ana',
+	'Sofia',
+	'Francisca',
+	'Inês',
+	'Margarida',
+	'Clara',
+	'Lara',
+	'Alice',
+	'Laura',
+	'Benedita',
+	'Diana',
+	'Madalena',
+	'Joana',
+	'Camila',
+	'Bianca',
+	'Mafalda',
+	'Íris',
+	'Vitória',
+	'Luana',
+	'Sara',
+	'Letícia',
+	'Gabriela',
+	'Rita',
+	'Eva',
+	'Mara',
+	'Yara',
+	'Luisa',
+	'Yasmin',
+	'Helena',
+	'Catarina',
+	'Valentina',
+	'Júlia',
+	'Marta',
+	'Noa',
+	'Rafaela',
+	'Teresa',
+	'Nicole',
+	'Melissa',
+	'Iara',
+	'Bruna',
+	'Isabel',
+	'Daniela',
+	'Miriam',
+	'Luna',
+	'Raquel',
+	'Bárbara',
+	'Mia',
+	'Áurea',
+	'Aurora',
+	'Juliana',
+	'Olívia',
+	'Amélia',
+	'Jéssica',
+	'Kelly',
+	'Érica',
+	'Naiara',
+	'Isabela',
+	'Adriana',
+	'Débora',
+	'Lorena',
+	'Isis',
+	'Emma',
+	'Julieta',
+	'Alexandra',
+	'Elisa',
+	'Frederica',
+	'Soraia',
+	'Tatiana',
+	'Eduarda',
+	'Chloe',
+	'Safira',
+	'Isabella',
+	'Mayara',
+	'Rosa',
+	'Emília',
+	'Vera',
+	'Sophia',
+	'Fabiana',
+	'Flor',
+	'Paloma',
+	'Luciana',
+	'Nádia',
+	'Alana',
+	'Ester',
+	'Aline',
+	'Larissa',
+	'Nair',
+	'Salomé',
+	'Renata',
+	'Sara',
+	'Andreia',
+	'Emily',
+	'Anita',
+	'Patrícia',
+	'Bia',
+	'Verônica',
+	'Iris',
+	'Serena',
+	'Cristiana',
+	'Dalila',
+	'Cláudia',
+	'Lúcia',
+	'Carla',
+	'Ângela',
+	'Neuza',
+	'Simone',
+	'Tamara',
+	'Clarice',
+	'Raissa',
+	'Maiara',
+	'Eliane',
+	'Cristina',
+	'Isa',
+	'Samira',
+	'Violeta',
+	'Estrela',
+	'Giovana',
+	'Valéria',
+	'Micaela',
+	'Jacinta',
+	'Sandra',
+	'Liliana',
+	'Cíntia',
+	'Marisa',
+	'Natasha',
+	'Rute',
+	'Telma',
+	'Jade',
+	'Eliana',
+	'Samara',
+	'Susana',
+	'Cátia',
+	'Elsa',
+	'Carina',
+	'Mônica',
+	'Ayla',
+	'Rebecca',
+	'Briana',
+	'Penélope',
+	'Heloisa',
+	'Flávia',
+	'Aléxia',
+	'Nina',
+	'Neide',
+	'Priscila',
+	'Evelyn',
+	'Vânia',
+	'Jasmine',
+	'Ariane',
+	'Abigail',
+	'Cecília',
+	'Milena',
+	'Manuela',
+	'Márcia',
+	'Marina',
+	'Glória',
+	'Erika',
+	'Samanta',
+	'Lívia',
+	'Ellen',
+	'Solange',
+	'Naomi',
+	'Antonia',
+	'Angelina',
+	'Vanessa',
+	'Amanda',
+	'Taís',
+	'Angélica',
+	'Natália',
+	'Brenda',
+	'Jennifer',
+	'Isadora',
+	'Sônia',
+	'Tânia',
+	'Silvia',
+	'Sabrina',
+	'Eleonora',
+	'Leandra',
+	'Fatima',
+	'Lua',
+	'Alina',
+	'Viviane',
+	'Ligia',
+	'Adriele',
+	'Janaína',
+	'Lavínia',
+	'Regina',
+	'Agatha',
+	'Léa'
+];
+
+var listaSobrenome =
+[
+	'Estevam',
+	'Silva',
+	'Santos',
+	'Ferreira',
+	'Nascimento',
+	'Perez',
+	'Militão',
+	'Monteiro',
+	'Abdala',
+	'Santiago',
+	'Pereira',
+	'Arruda',
+	'Ribeiro',
+	'Cunha',
+	'Lima',
+	'Figuerôa',
+	'Gonçalves',
+	'Araujo',
+	'Rodrigues',
+	'Abreu',
+	'Albuquerque',
+	'Almeida',
+	'Alves',
+	'Antunes',
+	'Avelar',
+	'Azevedo',
+	'Barros',
+	'Batista',
+	'Borges',
+	'Brandão',
+	'Bragança',
+	'Brito',
+	'Cabral',
+	'Caetano',
+	'Caires',
+	'Camacho',
+	'Camargo',
+	'Campos',
+	'Carvalho',
+	'Castilhos',
+	'Castro',
+	'Cerqueira',
+	'Coimbra',
+	'Conceição',
+	'Cotrim',
+	'Coutinho',
+	'Cruz',
+	'Cunha',
+	'Custódio',
+	'Damasceno',
+	'Dantas',
+	'Dias',
+	'Domingos',
+	'Domingues',
+	'Duarte',
+	'Dutra',
+	'Fagundes',
+	'Faria',
+	'Félix',
+	'Fernandes',
+	'Ferraz',
+	'Ferreira',
+	'Flores',
+	'Fonseca',
+	'Fontes',
+	'Fraga',
+	'Franco',
+	'Freire',
+	'Freitas',
+	'Freixo',
+	'Frota',
+	'Garcez',
+	'Garrido',
+	'Gaspar',
+	'Gentil',
+	'Godoy',
+	'da Graça',
+	'Guedes',
+	'Guerra',
+	'Henrique',
+	'Hilário',
+	'Hipólito',
+	'Jardim',
+	'Lacerda',
+	'Leal',
+	'Leite',
+	'Leme',
+	'Lemos',
+	'Lima',
+	'Linhares',
+	'Lisboa',
+	'Lira',
+	'Lobato',
+	'Lopes',
+	'Lourenço',
+	'Luz',
+	'Macedo',
+	'Machado',
+	'Maciel',
+	'Magalhães',
+	'Maia',
+	'Malta',
+	'Marcondes',
+	'Marinho',
+	'Martins',
+	'Medeiros',
+	'Monteiro',
+	'Matias',
+	'Matos',
+	'Medina',
+	'Menezes',
+	'Miranda',
+	'Monforte',
+	'Montenegro',
+	'Moreira',
+	'Mota',
+	'Moura',
+	'Muniz',
+	'Nascimento',
+	'Neto',
+	'Neves',
+	'Nobre',
+	'Nóbrega',
+	'Nogueira',
+	'Nolasco',
+	'Novais',
+	'Nunes',
+	'Oliveira',
+	'Onofre',
+	'Osório',
+	'Pacheco',
+	'Padilha',
+	'de Pádua',
+	'Paiva',
+	'Paixão',
+	'Palhaes',
+	'Peçanha',
+	'Pedroso',
+	'Peixoto',
+	'Penedo',
+	'Penha',
+	'Paz',
+	'Penteado',
+	'Pereira',
+	'Pessoa',
+	'Pestana',
+	'Pimentel',
+	'Pinheiro',
+	'Pires',
+	'Pontes',
+	'Porto',
+	'Prado',
+	'Prates',
+	'Prestes',
+	'Proença',
+	'Prudente',
+	'Quadros',
+	'Queirós',
+	'Quintana',
+	'Rabelo',
+	'Ramires',
+	'Ramos',
+	'Rangel',
+	'Reis',
+	'Ribeiro',
+	'Rocha',
+	'Rodrigues',
+	'Ruas',
+	'Sacramento',
+	'Saldanha',
+	'Salvador',
+	'Salomão',
+	'Santos',
+	'Santiago',
+	'Saraiva',
+	'Silva',
+	'Silveira',
+	'Silvestre',
+	'Simão',
+	'Cintra',
+	'Soares',
+	'Souza',
+	'Tavares',
+	'Teixeira',
+	'Toledo',
+	'Torrado',
+	'Torres',
+	'Toscano',
+	'Trindade',
+	'Uchoa',
+	'Valadão',
+	'Valente',
+	'Valentim',
+	'Valério',
+	'Valverde',
+	'Varanda',
+	'Vargas',
+	'Vasconcelos',
+	'Vasques',
+	'Vaz',
+	'Velasques',
+	'Veloso',
+	'Vergueiro',
+	'Viana',
+	'Vilela',
+	'Xavier',
+	'Watanabe',
+	'Yamamoto',
+	'Saito',
+	'Yoshida',
+	'Yamazaki',
+	'Kobayashi',
+	'Tanaka',
+	'Takahashi',
+	'Sato',
+	'Suzuki',
+	'Ito',
+	'Nakamura',
+	'Kobayashi',
+	'Kato',
+	'Yamada',
+	'Sasaki',
+	'Yamaguchi',
+	'Matsumoto',
+	'Shimizu',
+	'Nakajima',
+	'Maeda',
+	'Okada',
+	'Sakamoto',
+	'Nakagawa',
+	'Nakano',
+	'Matsui',
+	'Wang',
+	'Li',
+	'Zhang',
+	'Liu',
+	'Chen',
+	'Yang',
+	'Huang',
+	'Zhao',
+	'Zhu',
+	'Lin',
+	'Smith',
+	'Johnson',
+	'Williams',
+	'Jones',
+	'Brown',
+	'Davis',
+	'Miller',
+	'Wilson',
+	'Taylor',
+	'Thomas',
+	'Anderson',
+	'Jackson',
+	'White',
+	'Harris',
+	'Martin',
+	'Thompson',
+	'Garcia',
+	'Martinez',
+	'Clark',
+	'Lewis',
+	'Lee',
+	'Walker',
+	'Wild',
+	'Hall',
+	'Allen',
+	'Lopez',
+	'Scott',
+	'Green',
+	'Adams',
+	'Baker',
+	'Carter',
+	'Roberts',
+	'Turner',
+	'Philips',
+	'Campbell',
+	'Parker',
+	'Evans',
+	'Edwards',
+	'Collins',
+	'Stewart',
+	'Morris',
+	'Rogers',
+	'Cooper',
+	'Richard',
+	'Peterson',
+	'Watson',
+	'Brooks',
+	'Sanders',
+	'Price',
+	'Wood',
+	'Ross',
+	'Coleman',
+	'Jenkins',
+	'Hughes',
+	'Washington',
+	'Simmons',
+	'Foster',
+	'Bryant',
+	'Griffin'
 ];

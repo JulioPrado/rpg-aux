@@ -8,7 +8,7 @@
 			<span>1º Selecione o tipo de cenário:</span>
 			<select onchange="tipoOraculo(value);" class="form-control">
 		 		<option value="geral" active>Geral</option>
-		 		<option value="fantasia" disabled>Fantasia Medieval</option>
+		 		<option value="fantasia">Fantasia Medieval</option>
 		 		<option value="moderno" disabled>Mundo Moderno</option>
 		 		<option value ="supers" disabled>Super heróis</option>
 		 		<option value="cyberpunk" disabled>Cyberpunk</option>
@@ -21,7 +21,8 @@
 			</button><br/>
 			<br/>
 				3º Faça as perguntas que quiser para o desenvolvimento da sua história:
-				<br/><br/>
+				<br/>
+				<br/>
 				Sim e não:
 				<br/>
 				<button class="btn btn-sm btn-success" onclick="simeNao('Muito fácil')">
@@ -45,19 +46,19 @@
 				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
 				Missão
 				</button>
-				<button class="btn btn-sm btn-info" onclick="complicacoes()">
+				<button class="btn btn-sm btn-info" onclick="complicacao()">
 				Complicação
 				</button>
-				<button class="btn btn-sm btn-info" onclick="complicacoes()">
+				<button class="btn btn-sm btn-info" onclick="reviravolta()">
 				Reviravolta
 				</button>
-				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
+				<button class="btn btn-sm btn-info" onclick="gancho()">
 				Gancho
 				</button>
-				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
+				<button class="btn btn-sm btn-info" onclick="coisa()">
 				Coisa
 				</button>
-				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
+				<button class="btn btn-sm btn-info" onclick="lugarUrbano()">
 				Lugar urbano
 				</button>
 				<button class="btn btn-sm btn-info" onclick="lugarNatureza()">
@@ -69,16 +70,19 @@
 				<br/>
 				Oráculos Personagens:
 				<br/>
-				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
+				<button class="btn btn-sm btn-info" onclick="pessoa()">
 				Pessoa
 				</button>
-				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
-				Nome de personagem
+				<button class="btn btn-sm btn-info" onclick="nomeAtual()">
+				Nome atual
+				</button>
+				<button class="btn btn-sm btn-info" onclick="nomeFantasia()">
+				Nome fantasia
 				</button>
 				<button class="btn btn-sm btn-info" onclick="relacionamento()">
 				Relacionamento
 				</button>
-				<button class="btn btn-sm btn-info" onclick="emConstrucao()">
+				<button class="btn btn-sm btn-info" onclick="desejosObjetivos()">
 				Desejos e Objetivos
 				</button>
 				<button class="btn btn-sm btn-info" onclick="posturaPDM()">
