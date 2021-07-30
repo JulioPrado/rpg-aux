@@ -241,15 +241,15 @@ function uneArrays(tipo){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(tipo+'Supers','lista'+tipo);
+			arrayAux=arrayAux.concat(tipo+'Supers',tipo+'Moderno','lista'+tipo);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(tipo+'Cyberpunk','lista'+tipo);
+			arrayAux=arrayAux.concat(tipo+'Cyberpunk',tipo+'Moderno','lista'+tipo);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(tipo+'Pokemon','lista'+tipo);
+			arrayAux=arrayAux.concat(tipo+'Pokemon',tipo+'Moderno','lista'+tipo);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -275,15 +275,15 @@ function reviravolta(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(reviravoltaSupers,listareviravolta);
+			arrayAux=arrayAux.concat(reviravoltaSupers,reviravoltaModerno,listareviravolta);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(reviravoltaCyberpunk,listareviravolta);
+			arrayAux=arrayAux.concat(reviravoltaCyberpunk,reviravoltaModerno,listareviravolta);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(reviravoltaPokemon,listareviravolta);
+			arrayAux=arrayAux.concat(reviravoltaPokemon,reviravoltaModerno,listareviravolta);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -309,15 +309,15 @@ function relacionamento(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(relacionamentoSupers,listarelacionamento);
+			arrayAux=arrayAux.concat(relacionamentoSupers,relacionamentoModerno,listarelacionamento);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(relacionamentoCyberpunk,listarelacionamento);
+			arrayAux=arrayAux.concat(relacionamentoCyberpunk,relacionamentoModerno,listarelacionamento);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(relacionamentoPokemon,listarelacionamento);
+			arrayAux=arrayAux.concat(relacionamentoPokemon,relacionamentoModerno,listarelacionamento);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -342,15 +342,15 @@ function lugarNatureza(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(naturezaSupers,listanatureza);
+			arrayAux=arrayAux.concat(naturezaSupers,naturezaModerno,listanatureza);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(naturezaCyberpunk,listanatureza);
+			arrayAux=arrayAux.concat(naturezaCyberpunk,naturezaModerno,listanatureza);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(naturezaPokemon,listanatureza);
+			arrayAux=arrayAux.concat(naturezaPokemon,naturezaModerno,listanatureza);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -375,15 +375,15 @@ function lugarUrbano(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(urbanoSupers,listaurbano);
+			arrayAux=arrayAux.concat(urbanoSupers,urbanoModerno,listaurbano);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(urbanoCyberpunk,listaurbano);
+			arrayAux=arrayAux.concat(urbanoCyberpunk,urbanoModerno,listaurbano);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(urbanoPokemon,listaurbano);
+			arrayAux=arrayAux.concat(urbanoPokemon,urbanoModerno,listaurbano);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -408,15 +408,15 @@ function complicacao(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(complicacaoSupers,listacomplicacao);
+			arrayAux=arrayAux.concat(complicacaoSupers,complicacaoModerno,listacomplicacao);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(complicacaoCyberpunk,listacomplicacao);
+			arrayAux=arrayAux.concat(complicacaoCyberpunk,complicacaoModerno,listacomplicacao);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(complicacaoPokemon,listacomplicacao);
+			arrayAux=arrayAux.concat(complicacaoPokemon,complicacaoModerno,listacomplicacao);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -441,15 +441,15 @@ function gancho(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(ganchoSupers,listagancho);
+			arrayAux=arrayAux.concat(ganchoSupers,ganchoModerno,listagancho);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(ganchoCyberpunk,listagancho);
+			arrayAux=arrayAux.concat(ganchoCyberpunk,ganchoModerno,listagancho);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(ganchoPokemon,listagancho);
+			arrayAux=arrayAux.concat(ganchoPokemon,ganchoModerno,listagancho);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -474,15 +474,15 @@ function pessoa(){
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(pessoaSupers,listapessoa);
+			arrayAux=arrayAux.concat(pessoaSupers,pessoaModerno,listapessoa);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(pessoaCyberpunk,listapessoa);
+			arrayAux=arrayAux.concat(pessoaCyberpunk,pessoaModerno,listapessoa);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(pessoaPokemon,listapessoa);
+			arrayAux=arrayAux.concat(pessoaPokemon,pessoaModerno,listapessoa);
 		break;
 
 		default: console.log('Cenário inválido.');
@@ -490,37 +490,45 @@ function pessoa(){
 	escreverLog("<span style='font-weight: bolder'>Pessoa: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
-function coisa(){
+function objeto(){
 	let arrayAux=[];
 
 	switch(tipoCenario){
 		case 'geral':
-			arrayAux=arrayAux.concat(listacoisa);
+			arrayAux=arrayAux.concat(listaobjeto);
 		break;
 
 		case 'fantasia':
-			arrayAux=arrayAux.concat(coisaFantasia,listacoisa);
+			arrayAux=arrayAux.concat(objetoFantasia,listaobjeto);
 		break;	
 
 		case 'moderno':
-			arrayAux=arrayAux.concat(coisaModerno,listacoisa);
+			arrayAux=arrayAux.concat(objetoModerno,listaobjeto);
 		break;
 
 		case 'supers':
-			arrayAux=arrayAux.concat(coisaSupers,listacoisa);
+			arrayAux=arrayAux.concat(objetoSupers,objetoModerno,listaobjeto);
 		break;
 
 		case 'cyberpunk':
-			arrayAux=arrayAux.concat(coisaCyberpunk,listacoisa);
+			arrayAux=arrayAux.concat(objetoCyberpunk,objetoModerno,listaobjeto);
 		break;
 
 		case 'pokemon':
-			arrayAux=arrayAux.concat(coisaPokemon,listacoisa);
+			arrayAux=arrayAux.concat(objetoPokemon,objetoModerno,listaobjeto);
 		break;
 
 		default: console.log('Cenário inválido.');
 	}
 	escreverLog("<span style='font-weight: bolder'>Coisa: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
+}
+
+function acao(){
+	escreverLog("<span style='font-weight: bolder'>Ação: </span>"+listaacao[randomEntre(0,listaacao.length-1)]);
+}
+
+function tema(){
+	escreverLog("<span style='font-weight: bolder'>Tema: </span>"+listatema[randomEntre(0,listatema.length-1)]);
 }
 
 function nomeAtual(){
@@ -538,6 +546,11 @@ function posturaPDM(){
 function vegetacao(){
 	escreverLog("<span style='font-weight: bolder'>Vegetação: </span>"+listaVegetacao[randomEntre(0,listaVegetacao.length-1)]);
 }
+
+function ferimento(){
+	escreverLog("<span style='font-weight: bolder'>Ferimento: </span>"+listaFerimento[randomEntre(0,listaFerimento.length-1)]);
+}
+
 
 
 function nomeFantasia(){
@@ -663,66 +676,194 @@ function desejosObjetivos(){
 	escreverLog("<span style='font-weight: bolder'>Desejo/Objetivo do PDM: </span>"+desejo);
 }
 
-function missao(){
-	escreverLog("<span style='font-weight: bolder'>Missão: </span>"+listamissao[randomEntre(0,listamissao.length-1)]);
-}
 
-/*** MISSÃO ****************************************************************/
-var listamissao=
+
+/*** Ação ****************************************************************/
+var listaacao=
 [
-'Afetar [Pessoa]',
-'Ajudar [Pessoa]',
-'Alterar [Coisa]',
-'Ameaçar [Pessoa]',
-'Apoiar [Pessoa]',
-'Apreender [Coisa]',
-'Aprisionar [Pessoa]',
-'Arruinar [Lugar urbano]',
-'Atacar [Lugar urbano] ou [Pessoa]',
-'Atrair [Pessoa]',
-'Atrasar [Pessoa] ou [Coisa]',
-'Caçar [Pessoa]',
-'Comunicar [Pessoa][Lugar urbano]',
-'Convencer [Pessoa]',
-'Curar [Pessoa]',
-'Decifrar [Coisa]',
-'Defender [Pessoa] ou [Lugar] ou [Coisa]',
-'Derrotar [Pessoa]',
-'Destruir [Coisa][Lugar urbano]',
-'Distrair [Pessoa]',
-'Emboscar [Pessoa]',
-'Encontrar [Pessoa] ou [Coisa] ou [Lugar]',
-'Enfraquecer [Pessoa] ou [Coisa]',
-'Enganar [Pessoa]',
-'Entregar [Coisa]',
-'Escapar de [Lugar]',
-'Escoltar [Pessoa] ou [Coisa]',
-'Explorar [Lugar]',
-'Fortalecer [Coisa]',
-'Impedir [Pessoa]',
-'Interromper [Pessoa]',
-'Invadir [Lugar]',
-'Localizar [Pessoa] ou [Lugar] ou [Coisa]',
-'Matar [Pessoa]',
-'Observar [Pessoa] ou [Lugar] ou [Coisa]',
-'Obter [Coisa]',
-'Perguntar [Pessoa]',
-'Procurar [Pessoa] ou [Lugar] ou [Coisa]',
-'Proteger [Pessoa] ou [Lugar] ou [Coisa]',
-'Punir [Pessoa]',
-'Raptar [Pessoa]',
-'Recrutar [Pessoa]',
-'Recuperar [Coisa]',
-'Resgatar [Pessoa] ou [Coisa]',
-'Roubar [Coisa] de [Pessoa]',
-'Salvar [Pessoa] ou [Lugar]',
-'Seguir [Pessoa]',
-'Segurar [Coisa] ou [Pessoa]',
-'Separar [Coisa] de [Pessoa]',
-'Separar [Pessoa] de [Lugar urbano]',
-'Transportar [Coisa] até [Lugar natureza]',
-'Viajar até [Lugar natureza] para [missão]',
-'Vingar uma [Pessoa]'
+'Abandonar',
+'Afetar',
+'Ajudar',
+'Alterar',
+'Ameaçar',
+'Apoiar',
+'Apreender',
+'Aprisionar',
+'Arruinar',
+'Atacar',
+'Atrair',
+'Atrasar',
+'Auxiliar',
+'Buscar',
+'Caçar',
+'Celebrar',
+'Cuidar',
+'Começar',
+'Comunicar',
+'Controlar',
+'Convencer',
+'Curar',
+'Criar',
+'Danificar',
+'Decifrar',
+'Defender',
+'Derrotar',
+'Destruir',
+'Distrair',
+'Disputar',
+'Dividir',
+'Dominar',
+'Emboscar',
+'Encontrar',
+'Enfraquecer',
+'Enganar',
+'Entregar',
+'Escapar',
+'Escoltar',
+'Explorar',
+'Expor',
+'Focar',
+'Fortalecer',
+'Impedir',
+'Interromper',
+'Informar',
+'Invadir',
+'Investigar',
+'Libertar',
+'Liderar',
+'Localizar',
+'Matar',
+'Mover',
+'Mudar',
+'Observar',
+'Obter',
+'Perguntar',
+'Perseguir',
+'Perturbar',
+'Procurar',
+'Proteger',
+'Punir',
+'Quebrar',
+'Raptar',
+'Recrutar',
+'Recuperar',
+'Remover',
+'Resgatar',
+'Roubar',
+'Salvar',
+'Seguir',
+'Segurar',
+'Separar',
+'Transportar',
+'Tirar',
+'Trair',
+'Tomar',
+'Viajar',
+'Vingar',
+'Violar'
+];
+
+var listatema=[
+"Risco",
+"Habilidade",
+"Preço",
+"Aliado",
+"Batalha",
+"Segurança",
+"Sobrevivência",
+"Arma",
+"Ferimento",
+"Abrigo",
+"Líder",
+"Medo",
+"Tempo",
+"Dever",
+"Segredo",
+"Inocência",
+"Renome",
+"Direção",
+"Morte",
+"Honra",
+"Labor",
+"Solução",
+"Ferramenta",
+"Equilíbrio",
+"Amor",
+"Barreira",
+"Criação",
+"Decadência",
+"Comércio",
+"Vínculo",
+"Esperança",
+"Superstição",
+"Paz",
+"Decepção",
+"História",
+"Mundo",
+"Voto",
+"Proteção",
+"Natureza",
+"Opinião",
+"Fardo",
+"Vingança",
+"Oportunidade",
+"Facção",
+"Perigo",
+"Corrupção",
+"Liberdade",
+"Dívida",
+"Ódio",
+"Posse",
+"Desconhecido",
+"Passagem",
+"Terra",
+"Criatura",
+"Doença",
+"Vantagem",
+"Sangue",
+"Linguagem",
+"Rumor",
+"Fraqueza",
+"Ganância",
+"Família",
+"Recurso",
+"Estrutura",
+"Sonho",
+"Comunidade",
+"Guerra",
+"Fenômeno",
+"Prêmio",
+"Destino",
+"Momentum",
+"Poder",
+"Memória",
+"Ruína",
+"Misticismo",
+"Rival",
+"Problema",
+"Ideia",
+"Retaliação",
+"Saúde",
+"Comunhão",
+"Inimigo",
+"Religião",
+"Espírito",
+"Fama",
+"Desolação",
+"Força",
+"Conhecimento",
+"Verdade",
+"Busca",
+"Orgulho",
+"Perda",
+"Lei",
+"Caminho",
+"Aviso",
+"Relação",
+"Riqueza",
+"Lar",
+"Estratégia",
+"Suprimento"
 ];
 
 
@@ -759,7 +900,15 @@ var listareviravolta=
 'Você chama atenção de outros inimigos.',
 'Você descobre uma verdade prejudicial.',
 'Você é enviado para um lugar desconhecido.',
-'Você percebe que estava do lado errado o tempo todo.'
+'Você percebe que estava do lado errado o tempo todo.',
+'Um segredo sombrio é revelado.',
+'A verdade de um relacionamento é revelada.',
+'Um novo perigo aparece.',
+'Alguém retorna inesperadamente.',
+'Duas situações aparentemente que não estão relacionadas são mostradas como conectadas.',
+'Role mais duas reviravoltas, ambas acontecem.',
+'Você e um inimigo compartilham um objetivo comum.',
+'Alguém ou algo está faltando.',
 ];
 
 var reviravoltaFantasia=
@@ -774,7 +923,7 @@ var reviravoltaModerno=
 
 var reviravoltaSupers=
 [
-
+'O inimigo revela um novo poder.'
 ];
 
 var reviravoltaCyberpunk=
@@ -895,18 +1044,29 @@ var listanatureza=[
 
 var naturezaFantasia=
 [
-
+'Ruínas',
+'Floresta mística',
+'Pântano sombrio',
+'Montanha dos anões',
+'Ilha amaldiçoada'
 ];
 
 var naturezaModerno=
 [
-
+'Sítio',
+'Fazenda',
+'Parque nacional',
+'Tribo indígena'
 ];
 
 var naturezaSupers=
 [
-'planeta distante',
-'planeta próximo',
+'Planeta distante',
+'Planeta próximo',
+'No espaço sideral',
+'Em uma galáxia próxima',
+'Em uma galáxia distante',
+'Na órbita',
 'Outro plano',
 'Outra dimensão'
 ];
@@ -933,7 +1093,9 @@ var listaurbano=
 'Cidade distante',
 'Cripta',
 'Depósito',
+'Estrada',
 'Esgotos/subterrâneo',
+'Esconderijo',
 'Galpão abandonado',
 'Jardim',
 'Loja de armas',
@@ -952,23 +1114,93 @@ var urbanoFantasia=
 'Palácio',
 'Catacumbas',
 'Fortaleza',
+'Forte',
 'Torre',
 'Santuário',
-'tumba',
+'Tumba',
 'Taverna',
 'Estalagem',
 'Loja de suprimentos',
 'Forja',
 'A casa Nobre',
-'lugar místico',
-'ruínas antigas',
+'Lugar místico',
+'Ruínas antigas',
 'Reino secreto',
-'castelo'
+'Castelo',
+'Vilarejo'
 ];
 
 var urbanoModerno=
 [
-
+'Hospital',
+'Escola',
+'Creche',
+'Prédio comercial',
+'Prédio residencial',
+'Residência',
+'Empresa',
+'Fábrica',
+'Usina',
+'Laboratório',
+'Mercado pequeno',
+'Hipermercado',
+'Farmácia',
+'Posto de saúde',
+'Loja de material de construção',
+'Papelaria',
+'Empresa de ônibus',
+'Garagem',
+'Estacionamento',
+'Prédio policial',
+'Loja de roupas',
+'Padaria',
+'Loja de carros',
+'Loja de eletrodomésticos',
+'Faculdade',
+'Clínica Veterinária',
+'Hotel pequeno',
+'Hotel grande',
+'Motel',
+'Estação de metrô',
+'Aeroporto',
+'Museu',
+'Galeria de lojas',
+'Restaurante',
+'Fastfood',
+'Loja de 1,99',
+'Salão de beleza',
+'Cabelereiro',
+'Loja de óculos',
+'Loja de informática',
+'Academia',
+'Loja de bijuterias',
+'Joalheria',
+'Loja de ferramentas',
+'Loja de armas',
+'PetShop',
+'Loja de paisagismo',
+'Clínica dentista',
+'Loja de instrumentos musicais',
+'Ponto de venda de drogas',
+'Adega',
+'Açougue',
+'Bar',
+'Boate',
+'Estúdio de tatuagem',
+'Igreja evangélica',
+'Igreja católica',
+'Livraria',
+'Biblioteca',
+'Praça',
+'Shopping',
+'Prédio com salas comerciais',
+'Cinema',
+'Lanchonete',
+'Lotérica',
+'Banco',
+'Corpo de bombeiros',
+'Oficina de carros',
+'Oficina de motos'
 ];
 
 var urbanoSupers=
@@ -983,7 +1215,9 @@ var urbanoCyberpunk=
 
 var urbanoPokemon=
 [
-
+'Centro pokemon',
+'Ginásio',
+'Pokemarket'
 ];
 
 /* COMPLICAÇÃO ***************************************/
@@ -1169,12 +1403,63 @@ var pessoaFantasia=
 
 var pessoaModerno=
 [
-
+'Acadêmico(a)',
+'Motorista',
+'Militar',
+'Engenheiro(a) civil',
+'Empresário(a)',
+'Professor(a)',
+'Policial',
+'Cargo Político',
+'Músico/ista',
+'Jornalista',
+'Bombeiro(a)',
+'Advogado(a)',
+'Pedreiro(a)',
+'Psicólogo(a)',
+'Médico(a)',
+'Enfermeiro(a)',
+'Dentista',
+'Atleta profissional',
+'Artista',
+'Técnico de TI',
+'Hacker',
+'Programador(a)',
+'Auxiliar administrativo',
+'Atendente Telemarketing',
+'Açougueiro(a)',
+'Eletricista',
+'Encanador(a)',
+'Cozinheiro(a)',
+'Alfaiate',
+'Pescador(a)',
+'Caçador(a)',
+'Segurança',
+'Piloto(a)',
+'Cientista',
+'Lider religioso',
+'Biólogo(a)',
+'Químico(a)',
+'Matador(a) de aluguel',
+'Prostituta(o)',
+'Operário(a) de fábrica',
+'Gerente de fábrica',
+'Farmacêutico(a)',
+'Fazendeiro(a)',
+'Vendedor(a)',
+'Metatalúrgico(a)',
+'Serralheiro(a)',
+'Marceneiro(a)',
+'Guia turístico',
+'Porteiro(a)',
+'Veterinário(a)',
+'Fisioterapeuta',
+'Nutricionista'
 ];
 
 var pessoaSupers=
 [
-
+	
 ];
 
 var pessoaCyberpunk=
@@ -1189,35 +1474,29 @@ var pessoaPokemon=
 
 /* COISA ********************************************/
 
-var listacoisa=
+var listaobjeto=
 [
 'Anel',
+'Colar',
+'Óculos',
+'Escada',
 'Artefato',
 'Baú',
 'Capa',
 'Carga',
 'Carta',
 'Chave',
-'Culto',
-'Disputa',
 'Estatueta',
-'Guerra',
-'Identidade secreta',
 'Jóia',
 'Livro',
 'Máscara',
 'Meteorito',
-'Passado',
-'Paradeiro de alguém',
-'Política',
 'Quadro',
-'Respeito de alguém',
 'Riqueza de alguém',
-'Segredo',
-'Uma cerimônia'
+'Mapa'
 ];
 
-var coisaFantasia=
+var objetoFantasia=
 [
 'Coroa',
 'Cristal',
@@ -1232,27 +1511,39 @@ var coisaFantasia=
 'Espada',
 'Tomo',
 'Tesouro',
-'Caravana'
+'Caravana',
+'Armadura',
+'Escudo'
 ];
 
-var coisaModerno=
+var objetoModerno=
+[
+'Celular',
+'Computador',
+'Notebook',
+'Carro',
+'Moto',
+'Avião',
+'Eletrodoméstico',
+'Caixa eletrônico',
+'Furadeira',
+'GPS'
+];
+
+var objetoSupers=
+[
+'Arma de raio laser',
+'Traje tecnológico'
+];
+
+var objetoCyberpunk=
 [
 
 ];
 
-var coisaSupers=
+var objetoPokemon=
 [
-
-];
-
-var coisaCyberpunk=
-[
-
-];
-
-var coisaPokemon=
-[
-
+'Pokebola'
 ];
 
 /* ORACULOS GERAIS *********************************/
@@ -1279,7 +1570,12 @@ var listaAcoesCombate=
 'Postura Defensiva.',
 'Proteger.',
 'Tentar desarmar (se possível).',
-'Tentar imobilizar (se possível).'
+'Tentar imobilizar (se possível).',
+'Mudar de alvo',
+'Ação imprudente',
+'Ataque coordenado',
+'Usa terreno para ganhar vantagem',
+'Busca cobertura'
 ];
 
 var listaVegetacao=[

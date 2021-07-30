@@ -9,8 +9,8 @@
 			<select onchange="tipoOraculo(value);" class="form-control">
 		 		<option value="geral" active>Geral</option>
 		 		<option value="fantasia">Fantasia Medieval</option>
-		 		<option value="moderno" disabled>Mundo Moderno</option>
-		 		<option value ="supers" disabled>Super heróis</option>
+		 		<option value="moderno" >Mundo Moderno</option>
+		 		<option value ="supers" >Super heróis</option>
 		 		<option value="cyberpunk" disabled>Cyberpunk</option>
 		 		<option value="pokemon" disabled>Pokemon</option>
 			</select>
@@ -43,8 +43,20 @@
 				<br/>
 				Oráculos gerais:
 				<br/>
-				<button class="btn btn-sm btn-info" onclick="missao()">
-				Missão
+				<button class="btn btn-sm btn-info" onclick="acao()">
+				Ação
+				</button>
+				<button class="btn btn-sm btn-info" onclick="tema()">
+				Tema
+				</button>
+				<button class="btn btn-sm btn-info" onclick="objeto()">
+				Objeto
+				</button>
+				<button class="btn btn-sm btn-info" onclick="lugarUrbano()">
+				Lugar urbano
+				</button>
+				<button class="btn btn-sm btn-info" onclick="lugarNatureza()">
+				Lugar natureza
 				</button>
 				<button class="btn btn-sm btn-info" onclick="complicacao()">
 				Complicação
@@ -54,15 +66,6 @@
 				</button>
 				<button class="btn btn-sm btn-info" onclick="gancho()">
 				Gancho
-				</button>
-				<button class="btn btn-sm btn-info" onclick="coisa()">
-				Coisa
-				</button>
-				<button class="btn btn-sm btn-info" onclick="lugarUrbano()">
-				Lugar urbano
-				</button>
-				<button class="btn btn-sm btn-info" onclick="lugarNatureza()">
-				Lugar natureza
 				</button>
 				<button class="btn btn-sm btn-info" onclick="vegetacao()">
 				Vegetação
@@ -90,6 +93,9 @@
 				</button>
 				<button class="btn btn-sm btn-info" onclick="acaoCombate()">
 				Ação de combate
+				</button>
+				<button class="btn btn-sm btn-info" onclick="ferimento()">
+				Ferimento
 				</button>
 			<hr>
 			Se quiser, também pode escrever algo diretamente no histórico:
