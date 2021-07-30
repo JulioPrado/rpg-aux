@@ -221,8 +221,11 @@ function simeNao(chance){
 	escreverLog(string);
 }
 
+
+/* função pra arrumar
 function uneArrays(tipo){
 	let arrayAux=[];
+
 
 	switch(tipoCenario){
 		case 'geral':
@@ -253,19 +256,105 @@ function uneArrays(tipo){
 	}
 	return arrayAux;
 }
+*/
 
 function reviravolta(){
-	let arrayAux=uneArrays('reviravolta');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listareviravolta);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(reviravoltaFantasia,listareviravolta);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(reviravoltaModerno,listareviravolta);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(reviravoltaSupers,listareviravolta);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(reviravoltaCyberpunk,listareviravolta);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(reviravoltaPokemon,listareviravolta);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
+
 	escreverLog("<span style='font-weight: bolder'>Reviravolta: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
 function relacionamento(){
-	let arrayAux=uneArrays('relacionamento');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listarelacionamento);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(relacionamentoFantasia,listarelacionamento);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(relacionamentoModerno,listarelacionamento);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(relacionamentoSupers,listarelacionamento);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(relacionamentoCyberpunk,listarelacionamento);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(relacionamentoPokemon,listarelacionamento);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
 	escreverLog("<span style='font-weight: bolder'>Relacionamento: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
 function lugarNatureza(){
-	let arrayAux=uneArrays('natureza');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listanatureza);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(naturezaFantasia,listanatureza);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(naturezaModerno,listanatureza);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(naturezaSupers,listanatureza);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(naturezaCyberpunk,listanatureza);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(naturezaPokemon,listanatureza);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
 	escreverLog("<span style='font-weight: bolder'>Lugar: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
@@ -303,22 +392,134 @@ function lugarUrbano(){
 }
 
 function complicacao(){
-	let arrayAux=uneArrays('complicacao');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listacomplicacao);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(complicacaoFantasia,listacomplicacao);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(complicacaoModerno,listacomplicacao);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(complicacaoSupers,listacomplicacao);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(complicacaoCyberpunk,listacomplicacao);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(complicacaoPokemon,listacomplicacao);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
 	escreverLog("<span style='font-weight: bolder'>Complicação: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
 function gancho(){
-	let arrayAux=uneArrays('gancho');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listagancho);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(ganchoFantasia,listagancho);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(ganchoModerno,listagancho);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(ganchoSupers,listagancho);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(ganchoCyberpunk,listagancho);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(ganchoPokemon,listagancho);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
 	escreverLog("<span style='font-weight: bolder'>Gancho: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
 function pessoa(){
-	let arrayAux=uneArrays('pessoa');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listapessoa);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(pessoaFantasia,listapessoa);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(pessoaModerno,listapessoa);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(pessoaSupers,listapessoa);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(pessoaCyberpunk,listapessoa);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(pessoaPokemon,listapessoa);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
 	escreverLog("<span style='font-weight: bolder'>Pessoa: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
 function coisa(){
-	let arrayAux=uneArrays('coisa');
+	let arrayAux=[];
+
+	switch(tipoCenario){
+		case 'geral':
+			arrayAux=arrayAux.concat(listacoisa);
+		break;
+
+		case 'fantasia':
+			arrayAux=arrayAux.concat(coisaFantasia,listacoisa);
+		break;	
+
+		case 'moderno':
+			arrayAux=arrayAux.concat(coisaModerno,listacoisa);
+		break;
+
+		case 'supers':
+			arrayAux=arrayAux.concat(coisaSupers,listacoisa);
+		break;
+
+		case 'cyberpunk':
+			arrayAux=arrayAux.concat(coisaCyberpunk,listacoisa);
+		break;
+
+		case 'pokemon':
+			arrayAux=arrayAux.concat(coisaPokemon,listacoisa);
+		break;
+
+		default: console.log('Cenário inválido.');
+	}
 	escreverLog("<span style='font-weight: bolder'>Coisa: </span>"+arrayAux[randomEntre(0,arrayAux.length-1)]);
 }
 
@@ -461,6 +662,69 @@ function desejosObjetivos(){
 
 	escreverLog("<span style='font-weight: bolder'>Desejo/Objetivo do PDM: </span>"+desejo);
 }
+
+function missao(){
+	escreverLog("<span style='font-weight: bolder'>Missão: </span>"+listamissao[randomEntre(0,listamissao.length-1)]);
+}
+
+/*** MISSÃO ****************************************************************/
+var listamissao=
+[
+'Afetar [Pessoa]',
+'Ajudar [Pessoa]',
+'Alterar [Coisa]',
+'Ameaçar [Pessoa]',
+'Apoiar [Pessoa]',
+'Apreender [Coisa]',
+'Aprisionar [Pessoa]',
+'Arruinar [Lugar urbano]',
+'Atacar [Lugar urbano] ou [Pessoa]',
+'Atrair [Pessoa]',
+'Atrasar [Pessoa] ou [Coisa]',
+'Caçar [Pessoa]',
+'Comunicar [Pessoa][Lugar urbano]',
+'Convencer [Pessoa]',
+'Curar [Pessoa]',
+'Decifrar [Coisa]',
+'Defender [Pessoa] ou [Lugar] ou [Coisa]',
+'Derrotar [Pessoa]',
+'Destruir [Coisa][Lugar urbano]',
+'Distrair [Pessoa]',
+'Emboscar [Pessoa]',
+'Encontrar [Pessoa] ou [Coisa] ou [Lugar]',
+'Enfraquecer [Pessoa] ou [Coisa]',
+'Enganar [Pessoa]',
+'Entregar [Coisa]',
+'Escapar de [Lugar]',
+'Escoltar [Pessoa] ou [Coisa]',
+'Explorar [Lugar]',
+'Fortalecer [Coisa]',
+'Impedir [Pessoa]',
+'Interromper [Pessoa]',
+'Invadir [Lugar]',
+'Localizar [Pessoa] ou [Lugar] ou [Coisa]',
+'Matar [Pessoa]',
+'Observar [Pessoa] ou [Lugar] ou [Coisa]',
+'Obter [Coisa]',
+'Perguntar [Pessoa]',
+'Procurar [Pessoa] ou [Lugar] ou [Coisa]',
+'Proteger [Pessoa] ou [Lugar] ou [Coisa]',
+'Punir [Pessoa]',
+'Raptar [Pessoa]',
+'Recrutar [Pessoa]',
+'Recuperar [Coisa]',
+'Resgatar [Pessoa] ou [Coisa]',
+'Roubar [Coisa] de [Pessoa]',
+'Salvar [Pessoa] ou [Lugar]',
+'Seguir [Pessoa]',
+'Segurar [Coisa] ou [Pessoa]',
+'Separar [Coisa] de [Pessoa]',
+'Separar [Pessoa] de [Lugar urbano]',
+'Transportar [Coisa] até [Lugar natureza]',
+'Viajar até [Lugar natureza] para [missão]',
+'Vingar uma [Pessoa]'
+];
+
 
 /* REVIRAVOLTA *************************************************/
 var listareviravolta=
