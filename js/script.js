@@ -543,6 +543,10 @@ function posturaPDM(){
 	escreverLog("<span style='font-weight: bolder'>Postura: </span>"+listaPostura[randomEntre(0,listaPostura.length-1)]);
 }
 
+function comodo(){
+	escreverLog("<span style='font-weight: bolder'>Cômodo: </span>"+listaComodo[randomEntre(0,listaComodo.length-1)]);
+}
+
 function vegetacao(){
 	escreverLog("<span style='font-weight: bolder'>Vegetação: </span>"+listaVegetacao[randomEntre(0,listaVegetacao.length-1)]);
 }
@@ -1213,6 +1217,26 @@ var naturezaPokemon=
 [
 
 ];
+/* CÔMODO ******************************************/
+var listaComodo=
+[
+'Quarto',
+'Sala de estar',
+'Banheiro',
+'Cozinha',
+'Lavanderia',
+'Sala de jantar',
+'Despensa',
+'Garagem',
+'Closet',
+'Suíte',
+'Sotão',
+'Porão',
+'Escritório',
+'Varanda',
+'Corredor'
+]
+
 
 /* LUGAR URBANO ******************************************/
 
