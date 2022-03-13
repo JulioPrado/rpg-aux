@@ -24,88 +24,93 @@
 				<br/>
 				<br/>
 				Sim e não:
-				<br/>
-				<button class="btn btn-sm btn-success" onclick="simeNao('Muito fácil')">
-				Muito fácil
-				</button>
-				<button class="btn btn-sm btn-success" onclick="simeNao('Provável')">
-				Provável
-				</button>
-				<button class="btn btn-sm btn-success" onclick="simeNao('50/50')">
-				50/50
-				</button>
-				<button class="btn btn-sm btn-success" onclick="simeNao('Improvável')">
-				Improvável
-				</button>
-				<button class="btn btn-sm btn-success" onclick="simeNao('Muito difícil')">
-				Muito difícil
-				</button>
+				<div class="divFlex">
+					<button class="btn btn-sm btn-success" onclick="simeNao('Muito fácil')">
+					Muito fácil
+					</button>
+					<button class="btn btn-sm btn-success" onclick="simeNao('Provável')">
+					Provável
+					</button>
+					<button class="btn btn-sm btn-success" onclick="simeNao('50/50')">
+					50/50
+					</button>
+					<button class="btn btn-sm btn-success" onclick="simeNao('Improvável')">
+					Improvável
+					</button>
+					<button class="btn btn-sm btn-success" onclick="simeNao('Muito difícil')">
+					Muito difícil
+					</button>
+				</div>
 				<br/>
 				Oráculos gerais:
 				<br/>
-				<button class="btn btn-sm btn-info" onclick="acao()">
-				Ação
-				</button>
-				<button class="btn btn-sm btn-info" onclick="tema()">
-				Tema
-				</button>
-				<button class="btn btn-sm btn-info" onclick="objeto()">
-				Objeto
-				</button>
-				<button class="btn btn-sm btn-info" onclick="comodo()">
-				Cômodo
-				</button>
-				<button class="btn btn-sm btn-info" onclick="lugarUrbano()">
-				Lugar urbano
-				</button>
-				<button class="btn btn-sm btn-info" onclick="lugarNatureza()">
-				Lugar natureza
-				</button>
-				<button class="btn btn-sm btn-info" onclick="complicacao()">
-				Complicação
-				</button>
-				<button class="btn btn-sm btn-info" onclick="reviravolta()">
-				Reviravolta
-				</button>
-				<button class="btn btn-sm btn-info" onclick="gancho()">
-				Gancho
-				</button>
-				<button class="btn btn-sm btn-info" onclick="vegetacao()">
-				Vegetação
-				</button>
+				<div class="divFlex">
+					<button class="btn btn-sm btn-info" onclick="acao()">
+					Ação
+					</button>
+					<button class="btn btn-sm btn-info" onclick="tema()">
+					Tema
+					</button>
+					<button class="btn btn-sm btn-info" onclick="objeto()">
+					Objeto
+					</button>
+					<button class="btn btn-sm btn-info" onclick="comodo()">
+					Cômodo
+					</button>
+					<button class="btn btn-sm btn-info" onclick="lugarUrbano()">
+					Lugar urbano
+					</button>
+					<button class="btn btn-sm btn-info" onclick="lugarNatureza()">
+					Lugar natureza
+					</button>
+					<button class="btn btn-sm btn-info" onclick="complicacao()">
+					Complicação
+					</button>
+					<button class="btn btn-sm btn-info" onclick="reviravolta()">
+					Reviravolta
+					</button>
+					<button class="btn btn-sm btn-info" onclick="gancho()">
+					Gancho
+					</button>
+					<button class="btn btn-sm btn-info" onclick="vegetacao()">
+					Vegetação
+					</button>
+				</div>
 				<br/>
 				Oráculos Personagens:
 				<br/>
-				<button class="btn btn-sm btn-info" onclick="pessoa()">
-				Pessoa
-				</button>
-				<button class="btn btn-sm btn-info" onclick="nomeAtual()">
-				Nome atual
-				</button>
-				<button class="btn btn-sm btn-info" onclick="nomeFantasia()">
-				Nome fantasia
-				</button>
-				<button class="btn btn-sm btn-info" onclick="relacionamento()">
-				Relacionamento
-				</button>
-				<button class="btn btn-sm btn-info" onclick="desejosObjetivos()">
-				Desejos e Objetivos
-				</button>
-				<button class="btn btn-sm btn-info" onclick="posturaPDM()">
-				Postura
-				</button>
-				<button class="btn btn-sm btn-info" onclick="acaoCombate()">
-				Ação de combate
-				</button>
-				<button class="btn btn-sm btn-info" onclick="ferimento()">
-				Ferimento
-				</button>
+				<div class="divFlex">
+					<button class="btn btn-sm btn-info" onclick="pessoa()">
+					Alguém
+					</button>
+					<button class="btn btn-sm btn-info" onclick="nomeAtual()">
+					Nome atual
+					</button>
+					<button class="btn btn-sm btn-info" onclick="nomeFantasia()">
+					Nome fantasia
+					</button>
+					<button class="btn btn-sm btn-info" onclick="relacionamento()">
+					Relação
+					</button>
+					<button class="btn btn-sm btn-info" onclick="desejosObjetivos()">
+					Desejos e Objetivos
+					</button>
+					<button class="btn btn-sm btn-info" onclick="posturaPDM()">
+					Postura
+					</button>
+					<button class="btn btn-sm btn-info" onclick="acaoCombate()">
+					Ação de combate
+					</button>
+					<button class="btn btn-sm btn-info" onclick="ferimento()">
+					Ferimento
+					</button>
+				</div>
 			<hr>
-			Se quiser, também pode escrever algo diretamente no histórico:
+			Escrever diretamente no histórico:
 			<br>
 			<input id="campo" class="form-control" type="text" placeholder="Digite aqui">
 			<button onclick="adicionarCampo();" class="btn btn-danger">
-				Adicionar ao histórico
+				Incluir
 			</button>
 			<hr>
 			<span>Quando finalizar, fique à vontade para imprimir o histórico do oráculo em uma das opções:</span>
@@ -117,10 +122,12 @@
 				<button class="btn btn-sm btn-secondary" onclick="finalizaImprime2();">
 				Imprimir
 				</button>
-			</div>			
+			</div>		
 		</div>
 
 		<div id="log" class="col-sm-6">
+			
+			
 			
 
 		</div>
