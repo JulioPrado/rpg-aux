@@ -16,7 +16,7 @@
 			</select>
 			<br/>
 			<span>2º Inicie a sessão:</span>
-			<button class="btn btn-sm btn-danger" onclick="sessaoInicio()">
+			<button class="btn btn-sm btn-danger" onclick="sessaoInicio();scrollParaLog()">
 				Limpar e Iniciar nova sessão
 			</button><br/>
 			<br/>
@@ -25,19 +25,19 @@
 				<br/>
 				Sim e não:
 				<div class="divFlex">
-					<button class="btn btn-sm btn-success" onclick="simeNao('Muito fácil')">
+					<button class="btn btn-sm btn-success" onclick="simeNao('Muito fácil');scrollParaLog()">
 					Muito fácil
 					</button>
-					<button class="btn btn-sm btn-success" onclick="simeNao('Provável')">
+					<button class="btn btn-sm btn-success" onclick="simeNao('Provável');scrollParaLog()">
 					Provável
 					</button>
-					<button class="btn btn-sm btn-success" onclick="simeNao('50/50')">
+					<button class="btn btn-sm btn-success" onclick="simeNao('50/50');scrollParaLog()">
 					50/50
 					</button>
-					<button class="btn btn-sm btn-success" onclick="simeNao('Improvável')">
+					<button class="btn btn-sm btn-success" onclick="simeNao('Improvável');scrollParaLog()">
 					Improvável
 					</button>
-					<button class="btn btn-sm btn-success" onclick="simeNao('Muito difícil')">
+					<button class="btn btn-sm btn-success" onclick="simeNao('Muito difícil');scrollParaLog()">
 					Muito difícil
 					</button>
 				</div>
@@ -45,34 +45,34 @@
 				Oráculos gerais:
 				<br/>
 				<div class="divFlex">
-					<button class="btn btn-sm btn-info" onclick="acao()">
+					<button class="btn btn-sm btn-info" onclick="acao();scrollParaLog()">
 					Ação
 					</button>
-					<button class="btn btn-sm btn-info" onclick="tema()">
+					<button class="btn btn-sm btn-info" onclick="tema();scrollParaLog()">
 					Tema
 					</button>
-					<button class="btn btn-sm btn-info" onclick="objeto()">
+					<button class="btn btn-sm btn-info" onclick="objeto();scrollParaLog()">
 					Objeto
 					</button>
-					<button class="btn btn-sm btn-info" onclick="comodo()">
+					<button class="btn btn-sm btn-info" onclick="comodo();scrollParaLog()">
 					Cômodo
 					</button>
-					<button class="btn btn-sm btn-info" onclick="lugarUrbano()">
+					<button class="btn btn-sm btn-info" onclick="lugarUrbano();scrollParaLog()">
 					Lugar urbano
 					</button>
-					<button class="btn btn-sm btn-info" onclick="lugarNatureza()">
+					<button class="btn btn-sm btn-info" onclick="lugarNatureza();scrollParaLog()">
 					Lugar natureza
 					</button>
-					<button class="btn btn-sm btn-info" onclick="complicacao()">
+					<button class="btn btn-sm btn-info" onclick="complicacao();scrollParaLog()">
 					Complicação
 					</button>
-					<button class="btn btn-sm btn-info" onclick="reviravolta()">
+					<button class="btn btn-sm btn-info" onclick="reviravolta();scrollParaLog()">
 					Reviravolta
 					</button>
-					<button class="btn btn-sm btn-info" onclick="gancho()">
+					<button class="btn btn-sm btn-info" onclick="gancho();scrollParaLog()">
 					Gancho
 					</button>
-					<button class="btn btn-sm btn-info" onclick="vegetacao()">
+					<button class="btn btn-sm btn-info" onclick="vegetacao();scrollParaLog()">
 					Vegetação
 					</button>
 				</div>
@@ -80,57 +80,57 @@
 				Oráculos Personagens:
 				<br/>
 				<div class="divFlex">
-					<button class="btn btn-sm btn-info" onclick="pessoa()">
+					<button class="btn btn-sm btn-info" onclick="pessoa();scrollParaLog()">
 					Alguém
 					</button>
-					<button class="btn btn-sm btn-info" onclick="nomeAtual()">
+					<button class="btn btn-sm btn-info" onclick="nomeAtual();scrollParaLog()">
 					Nome atual
 					</button>
-					<button class="btn btn-sm btn-info" onclick="nomeFantasia()">
+					<button class="btn btn-sm btn-info" onclick="nomeFantasia();scrollParaLog()">
 					Nome fantasia
 					</button>
-					<button class="btn btn-sm btn-info" onclick="relacionamento()">
+					<button class="btn btn-sm btn-info" onclick="relacionamento();scrollParaLog()">
 					Relação
 					</button>
-					<button class="btn btn-sm btn-info" onclick="desejosObjetivos()">
+					<button class="btn btn-sm btn-info" onclick="desejosObjetivos();scrollParaLog()">
 					Desejos e Objetivos
 					</button>
-					<button class="btn btn-sm btn-info" onclick="posturaPDM()">
+					<button class="btn btn-sm btn-info" onclick="posturaPDM();scrollParaLog()">
 					Postura
 					</button>
-					<button class="btn btn-sm btn-info" onclick="acaoCombate()">
+					<button class="btn btn-sm btn-info" onclick="acaoCombate();scrollParaLog()">
 					Ação de combate
 					</button>
-					<button class="btn btn-sm btn-info" onclick="ferimento()">
+					<button class="btn btn-sm btn-info" onclick="ferimento();scrollParaLog()">
 					Ferimento
 					</button>
-				</div>
-			<hr>
-			Escrever diretamente no histórico:
-			<br>
-			<input id="campo" class="form-control" type="text" placeholder="Digite aqui">
-			<button onclick="adicionarCampo();" class="btn btn-danger">
-				Incluir
-			</button>
-			<hr>
-			<span>Quando finalizar, fique à vontade para imprimir o histórico do oráculo em uma das opções:</span>
-			<br>
-			<div class="btn-group" role="group" aria-label="Basic example">
-				<button class="btn btn-sm btn-danger" onclick="finalizaImprime1();">
-				Imprimir
-				</button>
-				<button class="btn btn-sm btn-secondary" onclick="finalizaImprime2();">
-				Imprimir
-				</button>
-			</div>		
+				</div>	
 		</div>
 
 		<div id="log" class="col-sm-6">
-			
-			
-			
 
+			<div class="input-group" style="margin: 0!important;">
+			  <input id="campo" type="text" class="form-control" placeholder="Digite algo para incluir no histórico">
+			  <div class="input-group-append">
+			    <button class="btn btn-dark" type="button" onclick="adicionarCampo();">Incluir</button>
+			  </div>
+			</div>	
+			<div id="divBotoesImprime" class="text-right">
+				<a class="btn btn-sm btn-danger" onclick="finalizaImprime1();">
+				PDF
+				</a>
+				<a class="btn btn-sm btn-secondary" onclick="finalizaImprime2();">
+				PDF
+				</a>
+			</div>
+			<div id="inclusoes">
+			  	
+			</div>
+			
 		</div>
+
+		
+			
 	</div>
 
 	<div id="divImprimir">

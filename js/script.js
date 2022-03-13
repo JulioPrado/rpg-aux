@@ -30,7 +30,6 @@ $(document).ready(function(){
 function adicionarCampo(){
 	var texto=document.getElementById('campo').value;
 	escreverLog("<span style='font-weight: bolder;' >Inserido manualmente</span>: "+texto);
-	scrollParaLog();
 	texto=document.getElementById('campo').value='';
 }
 
@@ -56,13 +55,13 @@ function escreverLog(texto){
 			min = '0'+min;
 		}
 
-	$('div#log').prepend("<span style='color:blue'>"+hora + ':' + min+'</span>: '+texto+'<br/>');
+	$('div#inclusoes').prepend("<span style='color:blue'>"+hora + ':' + min+'</span>: '+texto+'<br/>');
 }
 
 
 function sessaoInicio(){
 	if (confirm("Tem certeza de que quer apagar o histórico e iniciar uma nova sessão?")) {
-		$('div#log').html('');
+		$('div#inclusoes').html('');
 
 
 			// Obtém a data/hora atual
@@ -105,22 +104,15 @@ function sessaoInicio(){
 		}
 		
 
-		$('div#log').prepend("<h3 style='color:red;'>Iniciando sessão: "+dia_sem+', ' + str_data + ' às ' + str_hora+'</h3>');
+		$('div#inclusoes').prepend("<h3 style='color:red;'>Iniciando sessão: "+dia_sem+', ' + str_data + ' às ' + str_hora+'</h3>');
 		scrollParaLog();
-	}
-}
-
-/* testes *******************************************/
-function lorem(texto){
-	for (var i = 0; i<40;i++) {
-		escreverLog(texto+' pela '+i+' vez.');
 	}
 }
 
 /* impressão **************************************/
 function finalizaImprime1(){
 
-	var conteudoDiv = $('#log').html();
+	var conteudoDiv = $('#inclusoes').html();
 
 	$('#divImprimir').html(conteudoDiv);
     window.print();
@@ -129,7 +121,7 @@ function finalizaImprime1(){
 }
 
 function finalizaImprime2(){
-	var conteudo = document.getElementById('log').innerHTML;
+	var conteudo = document.getElementById('inclusoes').innerHTML;
 	var telaImpressao = window.open('about:blank');
 
 	telaImpressao.document.write(conteudo);

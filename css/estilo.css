@@ -94,6 +94,12 @@ div.divFlex{
 }
 
 
+div#divBotoesImprime a.btn{
+	color: white;
+}
+
+
+
 
 /* Tipografia *************************************************/
 body{
